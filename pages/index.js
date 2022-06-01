@@ -1,12 +1,12 @@
-import "react";
-import { Typography, Box, Stack } from "@mui/material";
-import PaddedBlock from "../src/custom-components/general/PaddedBlock";
+import React from "react";
+import { Typography } from "@mui/material";
+import PaddedBlock from "../src/custom-components/PaddedBlock";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { customThemes } from "../styles/themesMUI";
 import { useGlobalContext } from "../state-management/global-context";
-import Button from "@mui/material/Button";
-import React from "react";
+import Navbar from "../src/blocks/Navbar";
+import ThemeSwitch from "../src/custom-components/ThemeSwitch";
 
 export default function Home() {
   // Use Context API's global state to decide which theme to use
@@ -22,23 +22,7 @@ export default function Home() {
     <ThemeProvider theme={customThemes[theme]}>
       <CssBaseline>
         <PaddedBlock>
-          <Typography variant="h2" color="primary">
-            THEME TEXT
-          </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => setTheme("light")}
-          >
-            Light
-          </Button>
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => setTheme("dark")}
-          >
-            Dark
-          </Button>
+          <Navbar />
         </PaddedBlock>
       </CssBaseline>
     </ThemeProvider>

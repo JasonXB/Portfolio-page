@@ -4,7 +4,7 @@ export const breakpointValues = {
   xs: 0,
   sm: 700,
   md: 1000,
-  lg: 1300,
+  lg: 1232,
   xl: 1636,
 };
 const globalComponentChanges = {
