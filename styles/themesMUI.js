@@ -93,7 +93,7 @@ export const customThemes = {
       primary: { main: "#FFFFFF" }, //% white
       secondary: { main: "#43B7FF" }, //% blue
       info: { main: "#7BF0FF" }, //% teal
-      bg: { main: "#23395d" }, //% dark blue
+      bg: { main: '#02285b' }, //% dark blue
       unselected: { main: "#F5F5F5" }, // new
       selected: { main: "rgb(255,215,0)" }, // new
     },

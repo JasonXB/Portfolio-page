@@ -8,7 +8,7 @@ function PaddedBlock(props) {
   // On desktop screens, the main content will max out at 1200px (padding will still be there but not affect much)
   // The point of having a parent Box set to 100vw is so we can apply a background color across the entire viewport
   return (
-    <Box sx={(mui) => styles.outerBox(mui)}>
+    <Box sx={{ ...(mui) => styles.outerBox(mui) }}>
       <Box
         id="responsive_container"
         // The other padded block component must have the exact same sx object that follows

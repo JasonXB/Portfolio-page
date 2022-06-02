@@ -49,7 +49,6 @@ const styles = {
     gridTemplateColumns: "repeat(2, auto) 1fr repeat(5, auto)",
     alignItems: "center",
     gap: 3,
-    
     [`@media (max-width: ${navbar_mq})`]: { display: "none" },
   },
   title: {
