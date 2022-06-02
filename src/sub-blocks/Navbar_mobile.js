@@ -8,9 +8,18 @@ import Link from "@mui/material/Link";
 import { Stack } from "@mui/material";
 import { navbar_mq } from "../../styles/breakpoints";
 import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from '@mui/material/Drawer';
+import Drawer from "@mui/material/Drawer";
+import CloseIcon from "@mui/icons-material/Close";
+import { useGlobalContext } from "../../state-management/global-context";
+import Divider from "@mui/material/Divider";
 
 const ResponsiveAppBar = () => {
+  // Control whether sliding menu is open or not using state
+  const [drawer, setDrawer] = React.useState(false);
+  const toggleDrawer = () => setDrawer(!drawer);
+  // Get current theme from Global Context
+  const { theme } = useGlobalContext();
+
   return (
     <Box component="nav" sx={styles.nav}>
       <TsunamiIcon fontSize="large" sx={styles.icon} />
@@ -22,20 +31,51 @@ const ResponsiveAppBar = () => {
           Web design
         </Typography>
       </Stack>
-      <IconButton aria-label="delete">
-        <MenuIcon fontSize="large" />
-      </IconButton>
-      {/* <p></p>
-      <Link href="#skills" underline="none">
-        SKILLS
-      </Link>
-      <Link href="#projects" underline="none">
-        PROJECTS
-      </Link>
-      <Link underline="none">BLOG</Link> */}
-      {/* <IconButton aria-label="delete">
-        <Brightness4Icon fontSize="large" />
-      </IconButton> */}
+
+      <Stack key={"right"}>
+        <IconButton
+          aria-label="menu"
+          onClick={() => toggleDrawer()}
+          sx={styles.iconButton}
+        >
+          <MenuIcon fontSize="large" />
+        </IconButton>
+        <Drawer
+          anchor={"right"}
+          open={drawer}
+          onClose={() => toggleDrawer()}
+          modalProps={{ width: "500px" }}
+        >
+          <Stack sx={styles.menu}>
+            <IconButton
+              sx={{ ...styles.iconButton, p: 2 }}
+              aria-label="escape"
+              onClick={() => toggleDrawer()}
+            >
+              <CloseIcon fontSize="large" sx={{ mb: 4 }} />
+            </IconButton>
+            <Link href="#skills" underline="none" sx={styles.anchor}>
+              SKILLS
+            </Link>
+            <Link href="#projects" underline="none" sx={styles.anchor}>
+              PROJECTS
+            </Link>
+            <Link underline="none" sx={styles.anchor}>
+              BLOG
+            </Link>
+            <Divider sx={{ mb: 3 }} />
+            <IconButton
+              aria-label="delete"
+              sx={{ ...styles.iconButton, ...styles.anchor }}
+            >
+              <Typography variant="p" sx={{ mr: 1, fontSize: "1.125rem" }}>
+                {theme === "light" ? "DARK" : "LIGHT"}
+              </Typography>
+              <Brightness4Icon fontSize="large" />
+            </IconButton>
+          </Stack>
+        </Drawer>
+      </Stack>
     </Box>
   );
 };
@@ -64,5 +104,18 @@ const styles = {
   subtitle: {
     fontFamily: `'Permanent Marker', cursive`,
     fontSize: "1rem",
+  },
+  anchor: {
+    px: 3,
+    pb: 3,
+    textAlign: "right",
+    ml: 4,
+  },
+  menu: {
+    display: "grid",
+    fontSize: "1.125rem",
+  },
+  iconButton: {
+    justifySelf: "end",
   },
 };
