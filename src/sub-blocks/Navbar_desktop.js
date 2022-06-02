@@ -7,8 +7,10 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Link from "@mui/material/Link";
 import { Stack } from "@mui/material";
 import { navbar_mq } from "../../styles/breakpoints";
+import { useGlobalContext } from "../../state-management/global-context";
 
 const ResponsiveAppBar = () => {
+  const { toggleTheme } = useGlobalContext();
   return (
     <Box component="nav" sx={styles.nav}>
       <TsunamiIcon fontSize="large" sx={{ fontSize: "5rem" }} />
@@ -20,6 +22,7 @@ const ResponsiveAppBar = () => {
           Web design
         </Typography>
       </Stack>
+      {/*//! consider fixing this by specifying grid lines instead of adding filler */}
       <p></p>
       <Link href="#skills" underline="none">
         SKILLS
@@ -29,7 +32,7 @@ const ResponsiveAppBar = () => {
       </Link>
       {/* //! Make a blog real quick */}
       <Link underline="none">BLOG</Link>
-      <IconButton aria-label="delete">
+      <IconButton aria-label="theme toggle" onClick={() => toggleTheme()}>
         <Brightness4Icon fontSize="large" />
       </IconButton>
     </Box>

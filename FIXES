@@ -1,3 +1,11 @@
+=========== CORE FIXES ================
+
+- The 2 sets of anchor links in both navbars lead nowhere
+- The colors for the navbar are not set properly to go with each theme
+- You have an empty set of p tags in Navbar_Desktop
+
+============ LATE GAME =================
+
 CTRL F >BLOG<
 Make a few blog posts then link it to each instance of what you just searched
 Don't forget, we have multiple instances of the above occuring

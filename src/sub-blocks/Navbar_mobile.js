@@ -18,7 +18,7 @@ const ResponsiveAppBar = () => {
   const [drawer, setDrawer] = React.useState(false);
   const toggleDrawer = () => setDrawer(!drawer);
   // Get current theme from Global Context
-  const { theme } = useGlobalContext();
+  const { theme, toggleTheme } = useGlobalContext();
 
   return (
     <Box component="nav" sx={styles.nav}>
@@ -65,8 +65,9 @@ const ResponsiveAppBar = () => {
             </Link>
             <Divider sx={{ mb: 3 }} />
             <IconButton
-              aria-label="delete"
+              aria-label="theme toggle"
               sx={{ ...styles.iconButton, ...styles.anchor }}
+              onClick={() => toggleTheme()}
             >
               <Typography variant="p" sx={{ mr: 1, fontSize: "1.125rem" }}>
                 {theme === "light" ? "DARK" : "LIGHT"}
@@ -90,7 +91,7 @@ const styles = {
     gridTemplateColumns: "auto 1fr auto",
     alignItems: "center",
     gap: 1,
-    
+
     [`@media (min-width: ${navbar_mq})`]: { display: "none" },
   },
   icon: {
