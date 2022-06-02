@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
+// We may need to reference the following 3 objects across our project
 export const breakpointValues = {
   xs: 0,
   sm: 700,
@@ -7,6 +8,23 @@ export const breakpointValues = {
   lg: 1232,
   xl: 1636,
 };
+export const lightThemeColors = {
+  primary: { main: "#000000" }, //% black
+  secondary: { main: "#43B7FF" }, //% blue
+  info: { main: "#7BF0FF" }, //% teal
+  wave: { main: "aqua" }, //% white
+  unselected: { main: "#F5F5F5" }, // new
+  selected: { main: "rgb(255,215,0)" }, // new
+};
+export const darkThemeColors = {
+  primary: { main: "#FFFFFF" }, //% white
+  secondary: { main: "#43B7FF" }, //% blue
+  info: { main: "#7BF0FF" }, //% teal
+  wave: { main: "#02285b" }, //% dark blue
+  unselected: { main: "#F5F5F5" }, // new
+  selected: { main: "rgb(255,215,0)" }, // new
+};
+
 const globalComponentChanges = {
   // Disable button ripple- which is controlled as a default prop
   MuiButtonBase: {
@@ -17,6 +35,7 @@ const globalComponentChanges = {
     defaultProps: { disableGutters: true },
   },
 };
+
 const typography = {
   // regular fontSize will stay at 14px
   // Use for the big title on the Homepage
@@ -70,32 +89,16 @@ const typography = {
 };
 
 export const customThemes = {
-  // STANDARD LIGHT THEME
   light: createTheme({
     components: globalComponentChanges,
     breakpoints: { values: breakpointValues },
     typography: typography, // change header font sizes
-    palette: {
-      primary: { main: "#000000" }, //% black
-      secondary: { main: "#43B7FF" }, //% blue
-      info: { main: "#7BF0FF" }, //% teal
-      bg: { main: "#FFFFFF" }, //% white
-      unselected: { main: "#F5F5F5" }, // new
-      selected: { main: "rgb(255,215,0)" }, // new
-    },
-  }),
-  // DARK THEME
+    palette: lightThemeColors,
+  }), // STANDARD LIGHT THEME
   dark: createTheme({
     components: globalComponentChanges,
     breakpoints: { values: breakpointValues },
     typography: typography, // change header font sizes
-    palette: {
-      primary: { main: "#FFFFFF" }, //% white
-      secondary: { main: "#43B7FF" }, //% blue
-      info: { main: "#7BF0FF" }, //% teal
-      bg: { main: '#02285b' }, //% dark blue
-      unselected: { main: "#F5F5F5" }, // new
-      selected: { main: "rgb(255,215,0)" }, // new
-    },
-  }),
+    palette: darkThemeColors,
+  }), // ALT DARK THEME
 };

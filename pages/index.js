@@ -1,5 +1,4 @@
 import React from "react";
-import { Stack } from "@mui/material";
 import PaddedBlock from "../src/custom-components/PaddedBlock";
 import PaddedWavyBlock from "../src/custom-components/PaddedWavyBlock";
 import { CssBaseline } from "@mui/material";
@@ -7,7 +6,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { customThemes } from "../styles/themesMUI";
 import { useGlobalContext } from "../state-management/global-context";
 import Navbar from "../src/blocks/Navbar";
-import ThemeSwitch from "../src/custom-components/ThemeSwitch";
 
 export default function Home() {
   // Use Context API's global state to decide which theme to use
@@ -29,9 +27,3 @@ export default function Home() {
     </ThemeProvider>
   );
 }
-
-const styles = {
-  curved: () => ({
-    background: "orange",
-  }),
-};
