@@ -90,6 +90,7 @@ const styles = {
     gridTemplateColumns: "auto 1fr auto",
     alignItems: "center",
     gap: 1,
+    
     [`@media (min-width: ${navbar_mq})`]: { display: "none" },
   },
   icon: {

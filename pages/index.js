@@ -15,7 +15,7 @@ export default function Home() {
   React.useEffect(() => {
     const selectedTheme = localStorage.getItem("jasonxb_theme"); // "light", "dark", or falsy
     if (selectedTheme === "dark") setTheme("dark");
-    else setTheme("light");
+    else if (selectedTheme === "light") setTheme("light");
   }, []);
 
   return (

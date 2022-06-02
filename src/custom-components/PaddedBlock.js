@@ -10,7 +10,7 @@ function PaddedBlock(props) {
     <Box
       sx={(mui) => ({
         width: "calc(100vw - (100vw - 100%))",
-        background: mui.palette.bg.main,
+        backgroundColor: mui.palette.bg.main,
       })}
     >
       <Box
