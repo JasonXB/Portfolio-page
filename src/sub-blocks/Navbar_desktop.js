@@ -6,9 +6,8 @@ import TsunamiIcon from "@mui/icons-material/Tsunami";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Link from "@mui/material/Link";
 import { Stack } from "@mui/material";
-import { navbar_mq } from "../../styles/breakpoints";
+import { navbarBP } from "../../styles/breakpoints";
 import { useGlobalContext } from "../../state-management/global-context";
-import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
 import { mxn } from "../../styles/mixins";
 
 const ResponsiveAppBar = () => {
@@ -64,25 +63,25 @@ const styles = {
     gridTemplateColumns: "repeat(2, auto) 1fr repeat(5, auto)",
     alignItems: "center",
     gap: 4,
-    [`@media (max-width: ${navbar_mq})`]: { display: "none" },
+    [`@media (max-width: ${navbarBP.mobileToDesktop})`]: { display: "none" },
   },
   waveIcon: (mui) => ({
     color: mui.palette.wave.contrastText,
     fontSize: "3.5rem",
     mr: 1,
-    ["@media (min-width: 1000px)"]: { fontSize: "5rem" },
+    [navbarBP.desktop.minWidth]: { fontSize: "5rem" },
   }),
   title: (mui) => ({
     fontFamily: `'Orbitron', sans-serif`, //
     color: mui.palette.wave.contrastText,
     fontSize: "1.5rem",
-    ["@media (min-width: 1000px)"]: { fontSize: "2rem" },
+    [navbarBP.desktop.minWidth]: { fontSize: "2rem" },
   }),
   subtitle: (mui) => ({
     fontFamily: `'Orbitron', sans-serif`,
     color: mui.palette.wave.contrastText,
     fontSize: "1rem",
-    ["@media (min-width: 1000px)"]: { fontSize: "1.5rem" },
+    [navbarBP.desktop.minWidth]: { fontSize: "1.5rem" },
+    
   }),
-  
 };

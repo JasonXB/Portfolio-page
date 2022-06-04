@@ -40,7 +40,7 @@ const typography = {
   // regular fontSize will stay at 14px
   // Use for the big title on the Homepage
   h1: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "3.75rem", // 60px
     fontWeight: 300,
     lineHeight: 2.267,
@@ -48,7 +48,7 @@ const typography = {
   },
   // Use for section headers on the homepage
   h2: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "2.25rem", // 36px
     fontWeight: 400,
     lineHeight: 1.2,
@@ -57,14 +57,14 @@ const typography = {
   },
   // Use for new webpage section headers
   h3: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1.875rem", // 30px
     fontWeight: 400,
     lineHeight: 1.167,
     letterSpacing: "-0em",
   },
   h4: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1.5rem", // 24px
     fontWeight: 400,
     lineHeight: 1.235,
@@ -72,7 +72,7 @@ const typography = {
   },
   // Use for the homepage's expensive/cheap cards
   h5: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1.25rem", // 20px
     fontWeight: 400,
     lineHeight: 1.334,
@@ -80,7 +80,7 @@ const typography = {
   },
   // Use for descriptions underneath new section headers
   h6: {
-    fontFamily: `'Poppins', sans-serif`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1.125rem", // 18px
     fontWeight: 500,
     lineHeight: 1.6,

@@ -6,7 +6,7 @@ import TsunamiIcon from "@mui/icons-material/Tsunami";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Link from "@mui/material/Link";
 import { Stack } from "@mui/material";
-import { navbar_mq } from "../../styles/breakpoints";
+import { navbarBP } from "../../styles/breakpoints";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
@@ -73,7 +73,6 @@ const ResponsiveAppBar = () => {
               aria-label="theme toggle"
               sx={{ ...styles.iconButton, ...styles.anchor }}
               onClick={() => toggleTheme()}
-              
             >
               <Typography variant="p" sx={{ mr: 1, fontSize: "1.125rem" }}>
                 {theme === "light" ? "DARK" : "LIGHT"}
@@ -97,23 +96,22 @@ const styles = {
     gridTemplateColumns: "auto 1fr auto",
     alignItems: "center",
     gap: 1,
-
-    [`@media (min-width: ${navbar_mq})`]: { display: "none" },
+    [`@media (min-width: ${navbarBP.mobileToDesktop})`]: { display: "none" },
   },
   waveIcon: (mui) => ({
     fontSize: "3.5rem",
     mr: 1,
     color: mui.palette.wave.contrastText,
-    ["@media (max-width: 350px)"]: { fontSize: "2.5rem" },
+    [navbarBP.mobile.maxWidth]: { fontSize: "2.5rem" },
   }),
   title: (mui) => ({
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: navbarBP.font,
     fontSize: "1.5rem",
     color: mui.palette.wave.contrastText,
-    ["@media (max-width: 350px)"]: { fontSize: "1.125rem" },
+    [navbarBP.mobile.maxWidth]: { fontSize: "1.125rem" },
   }),
   subtitle: (mui) => ({
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: navbarBP.font,
     fontSize: "1rem",
     color: mui.palette.wave.contrastText,
   }),
@@ -127,7 +125,5 @@ const styles = {
     display: "grid",
     fontSize: "1.125rem",
   },
-  iconButton: {
-    justifySelf: "end",
-  },
+  iconButton: { justifySelf: "end" },
 };
