@@ -12,6 +12,7 @@ import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import { useGlobalContext } from "../../state-management/global-context";
 import Divider from "@mui/material/Divider";
+import { mxn } from "../../styles/mixins";
 
 const ResponsiveAppBar = () => {
   // Control whether sliding menu is open or not using state
@@ -22,16 +23,19 @@ const ResponsiveAppBar = () => {
 
   return (
     <Box component="nav" sx={styles.nav}>
-      <TsunamiIcon fontSize="large" sx={styles.icon} />
-      <Stack>
-        <Typography component="p" sx={styles.title}>
-          MONDO COOL
-        </Typography>
-        <Typography variant="p" sx={styles.subtitle}>
-          Web design
-        </Typography>
-      </Stack>
-
+      <Box sx={mxn.flexRow}>
+        <TsunamiIcon fontSize="large" sx={styles.icon} />
+        <Stack>
+          <Typography component="p" sx={styles.title}>
+            MONDO COOL
+          </Typography>
+          <Typography variant="p" sx={styles.subtitle}>
+            Web design
+          </Typography>
+        </Stack>
+      </Box>
+      {/* //!!! elim */}
+      <p></p>
       <Stack key={"right"}>
         <IconButton
           aria-label="menu"
@@ -96,15 +100,16 @@ const styles = {
   },
   icon: {
     fontSize: "3.5rem",
-    ["@media (max-width: 330px)"]: { fontSize: "2.5rem" },
+    mr:1,
+    ["@media (max-width: 350px)"]: { fontSize: "2.5rem" },
   },
   title: {
-    fontFamily: `'Permanent Marker', cursive`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1.5rem",
-    ["@media (max-width: 330px)"]: { fontSize: "1.25rem" },
+    ["@media (max-width: 350px)"]: { fontSize: "1.125rem" },
   },
   subtitle: {
-    fontFamily: `'Permanent Marker', cursive`,
+    fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1rem",
   },
   anchor: {

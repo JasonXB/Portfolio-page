@@ -1,2 +1,1 @@
-export const navbar_mq = "770px"
-
+export const navbar_mq = "800px";
