@@ -1,6 +1,6 @@
 import React from "react";
 import PaddedBlock from "../src/custom-components/PaddedBlock";
-import PaddedWavyBlock from "../src/custom-components/PaddedThemeBlock";
+import PaddedThemeBlock from "../src/custom-components/PaddedThemeBlock";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { customThemes } from "../styles/themesMUI";
@@ -20,9 +20,9 @@ export default function Home() {
   return (
     <ThemeProvider theme={customThemes[theme]}>
       <CssBaseline>
-        <PaddedWavyBlock>
+        <PaddedThemeBlock>
           <Navbar />
-        </PaddedWavyBlock>
+        </PaddedThemeBlock>
       </CssBaseline>
     </ThemeProvider>
   );
