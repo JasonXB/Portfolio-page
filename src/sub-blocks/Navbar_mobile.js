@@ -24,12 +24,12 @@ const ResponsiveAppBar = () => {
   return (
     <Box component="nav" sx={styles.nav}>
       <Box sx={mxn.flexRow}>
-        <TsunamiIcon fontSize="large" sx={styles.icon} />
+        <TsunamiIcon fontSize="large" sx={(mui) => styles.waveIcon(mui)} />
         <Stack>
-          <Typography component="p" sx={styles.title}>
+          <Typography component="p" sx={(mui) => styles.title(mui)}>
             MONDO COOL
           </Typography>
-          <Typography variant="p" sx={styles.subtitle}>
+          <Typography variant="p" sx={(mui) => styles.subtitle(mui)}>
             Web design
           </Typography>
         </Stack>
@@ -41,6 +41,7 @@ const ResponsiveAppBar = () => {
           aria-label="menu"
           onClick={() => toggleDrawer()}
           sx={styles.iconButton}
+          color="unselected"
         >
           <MenuIcon fontSize="large" />
         </IconButton>
@@ -72,6 +73,7 @@ const ResponsiveAppBar = () => {
               aria-label="theme toggle"
               sx={{ ...styles.iconButton, ...styles.anchor }}
               onClick={() => toggleTheme()}
+              
             >
               <Typography variant="p" sx={{ mr: 1, fontSize: "1.125rem" }}>
                 {theme === "light" ? "DARK" : "LIGHT"}
@@ -98,20 +100,23 @@ const styles = {
 
     [`@media (min-width: ${navbar_mq})`]: { display: "none" },
   },
-  icon: {
+  waveIcon: (mui) => ({
     fontSize: "3.5rem",
-    mr:1,
+    mr: 1,
+    color: mui.palette.wave.contrastText,
     ["@media (max-width: 350px)"]: { fontSize: "2.5rem" },
-  },
-  title: {
+  }),
+  title: (mui) => ({
     fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1.5rem",
+    color: mui.palette.wave.contrastText,
     ["@media (max-width: 350px)"]: { fontSize: "1.125rem" },
-  },
-  subtitle: {
+  }),
+  subtitle: (mui) => ({
     fontFamily: `'Orbitron', sans-serif`,
     fontSize: "1rem",
-  },
+    color: mui.palette.wave.contrastText,
+  }),
   anchor: {
     px: 3,
     pb: 3,

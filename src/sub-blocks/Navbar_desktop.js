@@ -84,7 +84,5 @@ const styles = {
     fontSize: "1rem",
     ["@media (min-width: 1000px)"]: { fontSize: "1.5rem" },
   }),
-  anchors: (mui) => ({
-    color: mui.palette.wave.contrastText,
-  }),
+  
 };

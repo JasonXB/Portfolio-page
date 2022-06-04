@@ -12,8 +12,8 @@ export const lightThemeColors = {
   primary: { main: "#000000" }, //% black
   secondary: { main: "#43B7FF" }, //% blue
   info: { main: "#7BF0FF" }, //% teal
-  wave: { main: "aqua", contrastText: "black" }, //% white
-  unselected: { main: "#F5F5F5" }, // new
+  wave: { main: "aqua", contrastText: "black" }, //%
+  unselected: { main: "#000000" }, //% black
   selected: { main: "rgb(255,215,0)" }, // new
 };
 export const darkThemeColors = {
@@ -21,7 +21,7 @@ export const darkThemeColors = {
   secondary: { main: "#43B7FF" }, //% blue
   info: { main: "#7BF0FF" }, //% teal
   wave: { main: "#02285b", contrastText: "white" }, //% dark blue
-  unselected: { main: "#F5F5F5" }, // new
+  unselected: { main: "#FFFFFF" }, //% white
   selected: { main: "rgb(255,215,0)" }, // new
 };
 
