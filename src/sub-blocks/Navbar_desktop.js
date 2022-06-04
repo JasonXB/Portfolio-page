@@ -66,22 +66,21 @@ const styles = {
     [`@media (max-width: ${navbarBP.mobileToDesktop})`]: { display: "none" },
   },
   waveIcon: (mui) => ({
-    color: mui.palette.wave.contrastText,
+    color: mui.palette.nav.contrastText,
     fontSize: "3.5rem",
     mr: 1,
     [navbarBP.desktop.minWidth]: { fontSize: "5rem" },
   }),
   title: (mui) => ({
     fontFamily: `'Orbitron', sans-serif`, //
-    color: mui.palette.wave.contrastText,
+    color: mui.palette.nav.contrastText,
     fontSize: "1.5rem",
     [navbarBP.desktop.minWidth]: { fontSize: "2rem" },
   }),
   subtitle: (mui) => ({
     fontFamily: `'Orbitron', sans-serif`,
-    color: mui.palette.wave.contrastText,
+    color: mui.palette.nav.contrastText,
     fontSize: "1rem",
     [navbarBP.desktop.minWidth]: { fontSize: "1.5rem" },
-    
   }),
 };

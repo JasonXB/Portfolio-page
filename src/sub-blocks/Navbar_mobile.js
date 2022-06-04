@@ -101,19 +101,19 @@ const styles = {
   waveIcon: (mui) => ({
     fontSize: "3.5rem",
     mr: 1,
-    color: mui.palette.wave.contrastText,
+    color: mui.palette.nav.contrastText,
     [navbarBP.mobile.maxWidth]: { fontSize: "2.5rem" },
   }),
   title: (mui) => ({
     fontFamily: navbarBP.font,
     fontSize: "1.5rem",
-    color: mui.palette.wave.contrastText,
+    color: mui.palette.nav.contrastText,
     [navbarBP.mobile.maxWidth]: { fontSize: "1.125rem" },
   }),
   subtitle: (mui) => ({
     fontFamily: navbarBP.font,
     fontSize: "1rem",
-    color: mui.palette.wave.contrastText,
+    color: mui.palette.nav.contrastText,
   }),
   anchor: {
     px: 3,
