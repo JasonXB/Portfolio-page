@@ -36,7 +36,7 @@ const ResponsiveAppBar = () => {
       </Box>
       {/* //!!! elim */}
       <p></p>
-      <Stack key={"right"}>
+      <Stack key={"top"}>
         <IconButton
           aria-label="menu"
           onClick={() => toggleDrawer()}
@@ -46,38 +46,54 @@ const ResponsiveAppBar = () => {
           <MenuIcon fontSize="large" />
         </IconButton>
         <Drawer
-          anchor={"right"}
+          anchor={"top"}
           open={drawer}
           onClose={() => toggleDrawer()}
           modalProps={{ width: "500px" }}
         >
           <Stack sx={styles.menu}>
-            <IconButton
-              sx={{ ...styles.iconButton, p: 2 }}
-              aria-label="escape"
-              onClick={() => toggleDrawer()}
-            >
-              <CloseIcon fontSize="large" sx={{ mb: 4 }} />
-            </IconButton>
+            <Box sx={styles.menuTopRow}>
+              <Box sx={mxn.flexRow}>
+                <TsunamiIcon fontSize="large" sx={styles.menuWaveIcon} />
+                <Stack>
+                  <Typography component="p" sx={(mui) => styles.title(mui)}>
+                    MONDO COOL
+                  </Typography>
+                  <Typography variant="p" sx={(mui) => styles.subtitle(mui)}>
+                    Web design
+                  </Typography>
+                </Stack>
+              </Box>
+              <IconButton
+                sx={{ ...styles.iconButton }}
+                aria-label="escape"
+                onClick={() => toggleDrawer()}
+              >
+                <CloseIcon fontSize="large" />
+              </IconButton>
+            </Box>
+            <Divider />
             <Link href="#skills" underline="none" sx={styles.anchor}>
               SKILLS
             </Link>
+            <Divider />
             <Link href="#projects" underline="none" sx={styles.anchor}>
               PROJECTS
             </Link>
+            <Divider />
             <Link underline="none" sx={styles.anchor}>
               BLOG
             </Link>
-            <Divider sx={{ mb: 3 }} />
+            <Divider />
             <IconButton
               aria-label="theme toggle"
-              sx={{ ...styles.iconButton, ...styles.anchor }}
+              sx={{ ...styles.anchor }}
               onClick={() => toggleTheme()}
             >
-              <Typography variant="p" sx={{ mr: 1, fontSize: "1.125rem" }}>
-                {theme === "light" ? "DARK" : "LIGHT"}
-              </Typography>
               <Brightness4Icon fontSize="large" />
+              <Typography variant="p" sx={{ ml: 1, fontSize: "1.125rem" }}>
+                {theme === "light" ? "DARK MODE" : "LIGHT MODE"}
+              </Typography>
             </IconButton>
           </Stack>
         </Drawer>
@@ -104,6 +120,12 @@ const styles = {
     color: mui.palette.nav.contrastText,
     [navbarBP.mobile.maxWidth]: { fontSize: "2.5rem" },
   }),
+  menuWaveIcon: {
+    fontSize: "3.5rem",
+    mr: 1,
+    display: "none",
+    ["@media (min-width: 400px)"]: { display: "block" },
+  },
   title: (mui) => ({
     fontFamily: navbarBP.font,
     fontSize: "1.5rem",
@@ -115,15 +137,15 @@ const styles = {
     fontSize: "1rem",
     color: mui.palette.nav.contrastText,
   }),
-  anchor: {
-    px: 3,
-    pb: 3,
-    textAlign: "right",
-    ml: 4,
-  },
+  anchor: { p: 3 },
   menu: {
     display: "grid",
     fontSize: "1.125rem",
+  },
+  menuTopRow: {
+    ...mxn.flexRow,
+    justifyContent: "space-between",
+    p: 3,
   },
   iconButton: { justifySelf: "end" },
 };
