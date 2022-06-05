@@ -13,16 +13,14 @@ export const lightThemeColors = {
   secondary: { main: "#43B7FF" }, //% blue
   info: { main: "#7BF0FF" }, //% teal
   nav: { main: "aqua", contrastText: "black" }, //%
-  unselected: { main: "#000000" }, //% black
-  selected: { main: "rgb(255,215,0)" }, // new
+  burger: { main: "#000000" },
 };
 export const darkThemeColors = {
   primary: { main: "#FFFFFF" }, //% white
   secondary: { main: "#43B7FF" }, //% blue
   info: { main: "#7BF0FF" }, //% teal
-  nav: { main: "#02285b", contrastText: "white" }, //% dark blue
-  unselected: { main: "#FFFFFF" }, //% white
-  selected: { main: "rgb(255,215,0)" }, // new
+  nav: { main: "#02285b", contrastText: "#FFFFFF" }, //% dark blue
+  burger: { main: "#FFFFFF" },
 };
 
 const globalComponentChanges = {

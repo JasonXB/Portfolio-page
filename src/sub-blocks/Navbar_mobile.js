@@ -41,7 +41,7 @@ const ResponsiveAppBar = () => {
           aria-label="menu"
           onClick={() => toggleDrawer()}
           sx={styles.iconButton}
-          color="unselected"
+          color="burger"
         >
           <MenuIcon fontSize="large" />
         </IconButton>
