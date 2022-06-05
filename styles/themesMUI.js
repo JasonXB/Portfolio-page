@@ -7,14 +7,13 @@ export const breakpointValues = {
   md: 1000,
   lg: 1232,
   xl: 1636,
-}; //
+};
 export const lightThemeColors = {
   primary: { main: "#64ffda" }, // vim green
   secondary: { main: "#ccd6f6" }, // bright silver
   info: { main: "#8892b0" }, // darker silver
   bg: { main: "#0a192f" }, // dark background color
   cardBg: { main: "rgba(2,12,27,0.7)" }, // same color as above but with opacity 0.7
-  
 };
 
 const globalComponentChanges = {
