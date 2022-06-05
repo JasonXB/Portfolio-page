@@ -3,5 +3,5 @@ import thinLogo from "../custom-components/thinLogo"
 import thickLogo from "../custom-components/boldLogo"
 
 export default function Navbar_desktop() {
-  return <div>Navbar_desktop</div>;
+  return <div></div>;
 }

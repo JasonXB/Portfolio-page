@@ -18,20 +18,17 @@ export const lightThemeColors = {
 
 const globalComponentChanges = {
   // Disable button ripple- which is controlled as a default prop
-  MuiButtonBase: {
-    defaultProps: { disableRipple: true },
-  },
+  MuiButtonBase: { defaultProps: { disableRipple: true } },
   // Remove Container's default padding
-  MuiContainer: {
-    defaultProps: { disableGutters: true },
-  },
+  MuiContainer: { defaultProps: { disableGutters: true } },
+  // MuiAppBar : {},
 };
 
 const typography = {
   // regular fontSize will stay at 14px
   // Use for the big title on the Homepage
   h1: {
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: `'Roboto', sans-serif`,
     fontSize: "3.75rem", // 60px
     fontWeight: 300,
     lineHeight: 2.267,
@@ -39,7 +36,7 @@ const typography = {
   },
   // Use for section headers on the homepage
   h2: {
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: `'Roboto', sans-serif`,
     fontSize: "2.25rem", // 36px
     fontWeight: 400,
     lineHeight: 1.2,
@@ -48,14 +45,14 @@ const typography = {
   },
   // Use for new webpage section headers
   h3: {
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: `'Roboto', sans-serif`,
     fontSize: "1.875rem", // 30px
     fontWeight: 400,
     lineHeight: 1.167,
     letterSpacing: "-0em",
   },
   h4: {
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: `'Fira Code', monospace`,
     fontSize: "1.5rem", // 24px
     fontWeight: 400,
     lineHeight: 1.235,
@@ -63,7 +60,7 @@ const typography = {
   },
   // Use for the homepage's expensive/cheap cards
   h5: {
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: `'Fira Code', monospace`,
     fontSize: "1.25rem", // 20px
     fontWeight: 400,
     lineHeight: 1.334,
@@ -71,7 +68,7 @@ const typography = {
   },
   // Use for descriptions underneath new section headers
   h6: {
-    fontFamily: `'Orbitron', sans-serif`,
+    fontFamily: `'Fira Code', monospace`,
     fontSize: "1.125rem", // 18px
     fontWeight: 500,
     lineHeight: 1.6,

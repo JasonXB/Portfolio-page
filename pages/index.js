@@ -1,11 +1,10 @@
 import React from "react";
-import BoldLogo from "../src/custom-components/boldLogo";
-import ThinLogo from "../src/custom-components/thinLogo";
+import PaddedBlock from "../src/custom-components/PaddedBlock"
+import Navbar from "../src/blocks/Navbar"
 export default function Home() {
   return (
-    <>
-      <ThinLogo />
-      <BoldLogo />
-    </>
+    <PaddedBlock>
+      <Navbar/>
+    </PaddedBlock>
   );
 }

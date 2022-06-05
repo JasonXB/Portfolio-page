@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 
 function Icon() {
   return (
-    <Box sx={{ width: "30px" }}>
+    <Box sx={{ width: "50px", height:"50px" }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         // width="40"
@@ -28,7 +28,7 @@ function Icon() {
           dy="0"
           fontFamily="'ef63KGAbkOd1:::Roboto'"
           fontSize="2.1"
-          fontWeight="400"
+          fontWeight="700"
         ></text>
         <text
           x="10.749"
