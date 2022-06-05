@@ -9,20 +9,12 @@ export const breakpointValues = {
   xl: 1636,
 }; //
 export const lightThemeColors = {
-  primary: { main: "#000000" }, //% black
-  secondary: { main: "#124FB9" }, //% blue
-  info: { main: "#7BF0FF" }, //% teal
-  // prettier-ignore
-  nav: { main: '#eccca2', contrastText: "#333333", menu:"#FFFFFF" }, //# nav
-  burger: { main: "#000000" },
-};
-export const darkThemeColors = {
-  primary: { main: "#FFFFFF" }, //% white
-  secondary: { main: "#43B7FF" }, //% blue
-  info: { main: "#7BF0FF" }, //% teal
-  // prettier-ignore
-  nav: { main: "#161616", contrastText: "#fff7f7", menu:"#161616" }, //# nav
-  burger: { main: "#FFFFFF" },
+  primary: { main: "#64ffda" }, // vim green
+  secondary: { main: "#ccd6f6" }, // bright silver
+  info: { main: "#8892b0" }, // darker silver
+  bg: { main: "#0a192f" }, // dark background color
+  cardBg: { main: "rgba(2,12,27,0.7)" }, // same color as above but with opacity 0.7
+  
 };
 
 const globalComponentChanges = {
@@ -95,10 +87,4 @@ export const customThemes = {
     typography: typography, // change header font sizes
     palette: lightThemeColors,
   }), // STANDARD LIGHT THEME
-  dark: createTheme({
-    components: globalComponentChanges,
-    breakpoints: { values: breakpointValues },
-    typography: typography, // change header font sizes
-    palette: darkThemeColors,
-  }), // ALT DARK THEME
 };
