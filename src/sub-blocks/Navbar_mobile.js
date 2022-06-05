@@ -50,11 +50,10 @@ export default function ButtonAppBar() {
               </IconButton>
             </Box>
             <Divider sx={{ ...styles.divider }} />
-            <SliderAnchor num="01" href="#about_me" txt="ABOUT ME" />
-            <SliderAnchor num="02" href="#skills" txt="SKILLS" />
-            <SliderAnchor num="03" href="#projects" txt="PROJECTS" />
-            {/* //! write a blog and link to it here */}
-            <SliderAnchor num="04" href="#blog" txt="BLOG" />
+            <SliderAnchor num="01" href="#about_me" txt="About me" />
+            <SliderAnchor num="02" href="#skills" txt="Skills" />
+            <SliderAnchor num="03" href="#projects" txt="Projects" />
+            <SliderAnchor num="04" href="#projects" txt="Contact" />
           </Stack>
         </Drawer>
       </AppBar>

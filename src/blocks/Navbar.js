@@ -5,8 +5,8 @@ import { Box } from "@mui/material";
 export default function Navbar() {
   return (
     <Box>
-      <Navbar_mobile />
-      {/* <Navbar_desktop /> */}
+      {/* <Navbar_mobile /> */}
+      <Navbar_desktop />
     </Box>
   );
 }
