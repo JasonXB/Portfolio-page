@@ -1,7 +1,8 @@
 import React from "react";
-import Box from '@mui/material/Box';
+import Box from "@mui/material/Box";
 
-function Icon() {
+function Icon(props) {
+  const { color } = props; // can use alt color using props
   return (
     <Box sx={{ width: "50px", height: "50px" }}>
       <svg
@@ -12,7 +13,7 @@ function Icon() {
       >
         <path
           fillOpacity="0"
-          stroke="#64ffda"
+          stroke={color || "#64ffda"}
           strokeWidth="3"
           d="M0 -18.990431L16.446195 -9.495216 16.446195 9.495215 0 18.990431 -16.446195 9.495215 -16.446195 -9.495216 0 -18.990431z"
           transform="translate(22.5 22.5)"
@@ -29,7 +30,7 @@ function Icon() {
           <tspan y="0"> </tspan>
         </text>
         <text
-          fill="#64ffda"
+          fill={color || "#64ffda"}
           strokeMiterlimit="1"
           strokeWidth="0"
           dx="0"

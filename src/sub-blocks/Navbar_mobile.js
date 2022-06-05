@@ -2,21 +2,19 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { Typography, Box, Stack, Divider, Link } from "@mui/material";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThinLogo from "../custom-components/thinLogo";
-import BoldLogo from "../custom-components/boldLogo";
 import { mxn } from "../../styles/mixins";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import SliderAnchor from "../custom-components/reusable/SliderAnchor";
+
 export default function ButtonAppBar() {
   // Control whether sliding menu is open or not using state
   const [drawer, setDrawer] = React.useState(true);
   const toggleDrawer = () => setDrawer(!drawer);
 
-  
   return (
     <Box sx={styles.spaceBetween}>
       {/* color="bg" nav here */}
@@ -42,20 +40,21 @@ export default function ButtonAppBar() {
         >
           <Stack sx={(mui) => styles.sliderMenu(mui)}>
             <Box sx={{ ...mxn.flexRow, justifyContent: "space-between" }}>
-              <ThinLogo />
+              <ThinLogo color="white" />
               <IconButton
                 aria-label="escape"
                 onClick={() => toggleDrawer()}
-                sx={(mui) => ({ color: 'white' })}
+                sx={(mui) => ({ color: "white" })}
               >
                 <CloseIcon fontSize="large" />
               </IconButton>
             </Box>
             <Divider sx={{ ...styles.divider }} />
-            <SliderAnchor num="1" href="#about_me" txt="ABOUT ME" />
-            <SliderAnchor num="2" href="#skills" txt="SKILLS" />
-            <SliderAnchor num="3" href="#projects" txt="PROJECTS" />
-            <SliderAnchor num="4" href="#blog" txt="BLOG" />
+            <SliderAnchor num="01" href="#about_me" txt="ABOUT ME" />
+            <SliderAnchor num="02" href="#skills" txt="SKILLS" />
+            <SliderAnchor num="03" href="#projects" txt="PROJECTS" />
+            {/* //! write a blog and link to it here */}
+            <SliderAnchor num="04" href="#blog" txt="BLOG" />
           </Stack>
         </Drawer>
       </AppBar>
@@ -83,6 +82,6 @@ const styles = {
 
   divider: {
     borderColor: "white",
-    pt:2
+    pt: 2,
   },
 };

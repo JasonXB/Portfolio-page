@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Fira+Code:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
 /* 
-font-family: 'Fira Code', monospace;    COMPUTER TEXT
-font-family: 'Roboto Mono', monospace;  ALT COMPUTER TEXT
+font-family: 'Roboto Mono', monospace;  COMPUTER TEXT
 
 font-family: 'Concert One', cursive;    LOGO TEXT
 font-family: 'Roboto', sans-serif;      REGULAR TEXT
@@ -9,7 +8,10 @@ font-family: 'Roboto', sans-serif;      REGULAR TEXT
 
 * {
   box-sizing: border-box;
-  font-family: "Concert One", cursive;
+  font-family: "Roboto", sans-serif;
+}
+span {
+  font-family: "Roboto Mono", monospace;
 }
 html {
   margin: 0;
@@ -17,14 +19,18 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background: #3c577f
+  background: #3c577f;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-p { 
-  color: rgb(204, 214, 246)
+p {
+  color: rgb(204, 214, 246);
+}
+/* prettier-ignore*/
+svg, path, text, tspan {
+  font-family: "Concert One", cursive; /* font for J logo*/
 }
 /* DIM IMAGE BRIGHTNESS FOR HOVERED IMAGES */
 .darken {
