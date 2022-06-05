@@ -7,19 +7,21 @@ export const breakpointValues = {
   md: 1000,
   lg: 1232,
   xl: 1636,
-};
+}; //
 export const lightThemeColors = {
   primary: { main: "#000000" }, //% black
-  secondary: { main: "#43B7FF" }, //% blue
+  secondary: { main: "#124FB9" }, //% blue
   info: { main: "#7BF0FF" }, //% teal
-  nav: { main: "aqua", contrastText: "black" }, //%
+  // prettier-ignore
+  nav: { main: '#eccca2', contrastText: "#333333", menu:"#FFFFFF" }, //# nav
   burger: { main: "#000000" },
 };
 export const darkThemeColors = {
   primary: { main: "#FFFFFF" }, //% white
   secondary: { main: "#43B7FF" }, //% blue
   info: { main: "#7BF0FF" }, //% teal
-  nav: { main: "#02285b", contrastText: "#FFFFFF" }, //% dark blue
+  // prettier-ignore
+  nav: { main: "#161616", contrastText: "#fff7f7", menu:"#161616" }, //# nav
   burger: { main: "#FFFFFF" },
 };
 

@@ -20,7 +20,9 @@ const ResponsiveAppBar = () => {
   const toggleDrawer = () => setDrawer(!drawer);
   // Get current theme from Global Context
   const { theme, toggleTheme } = useGlobalContext();
-
+  
+  // Divider colors depend on the theme
+  const dividerStyles = { borderColor: theme === "dark" ? "white" : "" }
   return (
     <Box component="nav" sx={styles.nav}>
       <Box sx={mxn.flexRow}>
@@ -51,10 +53,13 @@ const ResponsiveAppBar = () => {
           onClose={() => toggleDrawer()}
           modalProps={{ width: "500px" }}
         >
-          <Stack sx={styles.menu}>
+          <Stack sx={(mui) => styles.menu(mui)}>
             <Box sx={styles.menuTopRow}>
               <Box sx={mxn.flexRow}>
-                <TsunamiIcon fontSize="large" sx={styles.menuWaveIcon} />
+                <TsunamiIcon
+                  fontSize="large"
+                  sx={(mui) => styles.menuWaveIcon(mui)}
+                />
                 <Stack>
                   <Typography component="p" sx={(mui) => styles.title(mui)}>
                     MONDO COOL
@@ -65,29 +70,45 @@ const ResponsiveAppBar = () => {
                 </Stack>
               </Box>
               <IconButton
-                sx={{ ...styles.iconButton }}
+                sx={(mui) => ({
+                  ...styles.iconButton,
+                  ...styles.thematicColor(mui),
+                })}
                 aria-label="escape"
                 onClick={() => toggleDrawer()}
               >
                 <CloseIcon fontSize="large" />
               </IconButton>
             </Box>
-            <Divider />
-            <Link href="#skills" underline="none" sx={styles.anchor}>
+            <Divider sx={{ borderColor: theme === "dark" ? "white" : "" }} />
+
+            <Link
+              href="#skills"
+              underline="none"
+              sx={(mui) => styles.anchor(mui)}
+            >
               SKILLS
             </Link>
-            <Divider />
-            <Link href="#projects" underline="none" sx={styles.anchor}>
+            <Divider sx={{ borderColor: theme === "dark" ? "white" : "" }} />
+            <Link
+              href="#projects"
+              underline="none"
+              sx={(mui) => styles.anchor(mui)}
+            >
               PROJECTS
             </Link>
-            <Divider />
-            <Link underline="none" sx={styles.anchor}>
+            <Divider sx={{ borderColor: theme === "dark" ? "white" : "" }} />
+            <Link underline="none" sx={(mui) => styles.anchor(mui)}>
               BLOG
             </Link>
-            <Divider />
+            <Divider sx={{ borderColor: theme === "dark" ? "white" : "" }} />
             <IconButton
               aria-label="theme toggle"
-              sx={{ ...styles.anchor }}
+              sx={(mui) => ({
+                ...styles.anchor,
+                ...styles.thematicColor(mui),
+                p: 3,
+              })}
               onClick={() => toggleTheme()}
             >
               <Brightness4Icon fontSize="large" />
@@ -120,12 +141,13 @@ const styles = {
     color: mui.palette.nav.contrastText,
     [navbarBP.mobile.maxWidth]: { fontSize: "2.5rem" },
   }),
-  menuWaveIcon: {
+  menuWaveIcon: (mui) => ({
     fontSize: "3.5rem",
     mr: 1,
     display: "none",
+    color: mui.palette.nav.contrastText,
     ["@media (min-width: 400px)"]: { display: "block" },
-  },
+  }),
   title: (mui) => ({
     fontFamily: navbarBP.font,
     fontSize: "1.5rem",
@@ -137,15 +159,18 @@ const styles = {
     fontSize: "1rem",
     color: mui.palette.nav.contrastText,
   }),
-  anchor: { p: 3 },
-  menu: {
+  anchor: (mui) => ({ p: 3, color: mui.palette.nav.contrastText }),
+  menu: (mui) => ({
     display: "grid",
     fontSize: "1.125rem",
-  },
+    backgroundColor: mui.palette.nav.menu,
+  }),
   menuTopRow: {
     ...mxn.flexRow,
     justifyContent: "space-between",
     p: 3,
   },
   iconButton: { justifySelf: "end" },
+  thematicColor: (mui) => ({ color: mui.palette.nav.contrastText }),
+  
 };
