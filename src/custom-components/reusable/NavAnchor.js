@@ -6,7 +6,7 @@ export default function NavAnchor(props) {
 
   return (
     <Link href={href} underline="none" sx={styles.anchor}>
-      <Typography variant="span" sx={(mui) => styles.numSpan(mui)}>
+      <Typography variant="span" color="primary" sx={{ mr: 1 }}>
         {num}.
       </Typography>
       <Typography variant="p" sx={(mui) => styles.txtSpan(mui)}>
@@ -16,7 +16,6 @@ export default function NavAnchor(props) {
   );
 }
 const styles = {
-  numSpan: (mui) => ({ color: mui.palette.primary.main, mr: 1 }),
   txtSpan: (mui) => ({ color: mui.palette.info.main }),
   // Colors link text on hover
   anchor: (mui) => ({

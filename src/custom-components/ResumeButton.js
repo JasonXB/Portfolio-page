@@ -12,7 +12,7 @@ export default function ResumeButton({ customVariant }) {
     return (
       <Button
         variant="outlined"
-        color="secondary"
+        color="info"
         sx={{
           width: "50%",
           mx: "auto",
