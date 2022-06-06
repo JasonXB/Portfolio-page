@@ -9,14 +9,21 @@ import { mxn } from "../../styles/mixins";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import SliderAnchor from "../custom-components/reusable/SliderAnchor";
+import { navbarBP } from "../../styles/breakpoints";
+import ResumeButton from "../custom-components/ResumeButton";
 
 export default function ButtonAppBar() {
   // Control whether sliding menu is open or not using state
-  const [drawer, setDrawer] = React.useState(true);
+  const [drawer, setDrawer] = React.useState(false);
   const toggleDrawer = () => setDrawer(!drawer);
 
   return (
-    <Box sx={styles.spaceBetween}>
+    <Box
+      sx={{
+        ...styles.spaceBetween,
+        [navbarBP.mobile.minWidth]: { display: "none" },
+      }}
+    >
       {/* color="bg" nav here */}
       <AppBar position="static" color="bg" sx={{ boxShadow: "none" }}>
         <Toolbar sx={{ ...styles.spaceBetween }}>
@@ -54,6 +61,7 @@ export default function ButtonAppBar() {
             <SliderAnchor num="02" href="#skills" txt="Skills" />
             <SliderAnchor num="03" href="#projects" txt="Projects" />
             <SliderAnchor num="04" href="#projects" txt="Contact" />
+            <ResumeButton customVariant="mobile" />
           </Stack>
         </Drawer>
       </AppBar>
@@ -82,5 +90,6 @@ const styles = {
   divider: {
     borderColor: "white",
     pt: 2,
+    mb: 2,
   },
 };

@@ -13,7 +13,7 @@ export const lightThemeColors = {
   secondary: { main: "#ccd6f6" }, // bright silver
   info: { main: "#8892b0" }, // darker silver
   bg: { main: "#0a192f" }, // dark background color
-  cardBg: { main: "rgba(2,12,27,0.7)" }, // same color as above but with opacity 0.7
+  cardBg: { main: "rgba(2,12,27,0.82)" }, // same color as above but with opacity 0.7
 };
 
 const globalComponentChanges = {

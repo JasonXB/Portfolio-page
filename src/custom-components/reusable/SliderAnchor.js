@@ -7,7 +7,7 @@ export default function SliderAnchor(props) {
       <Typography variant="span" sx={{ mr: 2, color: "white" }}>
         {num}.
       </Typography>
-      <Typography variant="p" sx={{ mr: 2, color: "white" }}>
+      <Typography variant="p" sx={{ color: "white" }}>
         {txt}
       </Typography>
     </Link>

@@ -3,10 +3,18 @@ import ThinLogo from "../custom-components/thinLogo";
 import ThickLogo from "../custom-components/boldLogo";
 import { Typography, Box, Stack, AppBar, Toolbar } from "@mui/material";
 import NavAnchor from "../custom-components/reusable/NavAnchor";
-
+import ResumeButton from "../custom-components/ResumeButton";
+import { navbarBP } from "../../styles/breakpoints";
 export default function Navbar_desktop() {
   return (
-    <AppBar position="static" color="bg" sx={{ boxShadow: "none" }}>
+    <AppBar
+      position="static"
+      color="bg"
+      sx={{
+        boxShadow: "none",
+        [navbarBP.desktop.maxWidth]: { display: "none" },
+      }}
+    >
       <Toolbar sx={{ ...styles.spaceBetween }}>
         <ThinLogo />
         <p></p>
@@ -14,6 +22,7 @@ export default function Navbar_desktop() {
         <NavAnchor num="02" href="#skills" txt="Skills" />
         <NavAnchor num="03" href="#projects" txt="Projects" />
         <NavAnchor num="04" href="#contact" txt="Contact" />
+        <ResumeButton />
       </Toolbar>
     </AppBar>
   );
@@ -27,7 +36,7 @@ const styles = {
   },
   spaceBetween: {
     display: "grid",
-    gridTemplateColumns: "auto 1fr repeat(4,auto)",
+    gridTemplateColumns: "auto 1fr repeat(5,auto)",
     gap: 4,
     height: "4rem",
   },

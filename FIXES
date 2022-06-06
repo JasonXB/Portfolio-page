@@ -20,6 +20,10 @@ https://www.youtube.com/watch?v=wARbgs5Fmuw&ab_channel=KevinPowell
 https://www.youtube.com/watch?v=fs9uJ7I4a70&ab_channel=KevinPowell
 
 ============ LATE GAME =================
+Resume button needs to trigger a resume download
+Make sure to code a utility function that does this (test on mobile and desktop)
+
+Test that all anchors on mobile and desktop lead where they should
 
 CTRL F >BLOG<
 Make a few blog posts then link it to each instance of what you just searched
