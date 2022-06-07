@@ -38,7 +38,7 @@ export default function About() {
             really obscure bugs, I'm finally ready to make the leap and go pro. Wish me luck! 😄
           </Typography>
         </Stack>
-        <img src="/images/me.jpg" alt="Photo of Jason XB" />
+        {/* <img src="/images/me.jpg" alt="Photo of Jason XB" /> */}
       </Container>
     </Box>
   );
