@@ -33,7 +33,7 @@ const typography = {
     lineHeight: "normal",
     letterSpacing: "-0.01562em",
   },
-  // Use for section headers on the homepage
+  
   h2: {
     fontFamily: `'Roboto', sans-serif`,
     fontSize: "2.25rem", // 36px
@@ -42,13 +42,13 @@ const typography = {
     letterSpacing: "-0em",
     marginBottom: "1.875rem",
   },
-  // Use for new webpage section headers
+  // 01 02 03 04 headers
   h3: {
     fontFamily: `'Roboto', sans-serif`,
-    fontSize: "1.875rem", // 30px
-    fontWeight: 400,
+    fontSize: "2rem",
+    fontWeight: 600,
     lineHeight: 1.167,
-    letterSpacing: "-0em",
+    // letterSpacing: "-0em",
   },
   h4: {
     fontFamily: `'Fira Code', monospace`,

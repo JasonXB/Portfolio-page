@@ -4,7 +4,7 @@ import Navbar_mobile from "../sub-blocks/Navbar_mobile";
 import { Box } from "@mui/material";
 export default function Navbar() {
   return (
-    <Box>
+    <Box sx={{ pt: 2 }}>
       <Navbar_mobile />
       <Navbar_desktop />
     </Box>
