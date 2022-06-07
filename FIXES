@@ -25,6 +25,8 @@ Make sure to code a utility function that does this (test on mobile and desktop)
 
 Test that all anchors on mobile and desktop lead where they should
 
+Create a blog and make it so the "Check out my blog!" button leads to it
+
 CTRL F >BLOG<
 Make a few blog posts then link it to each instance of what you just searched
 Don't forget, we have multiple instances of the above occuring

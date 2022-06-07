@@ -11,7 +11,7 @@ export const breakpointValues = {
 export const lightThemeColors = {
   primary: { main: "#64ffda" }, // vim green
   secondary: { main: "#8892b0" }, // darker silver
-  info: { main: "#ccd6f6" }, // bright silver
+  header: { main: "#ccd6f6" }, // bright silver
   bg: { main: "#0a192f" }, // dark background color
   cardBg: { main: "rgba(2,12,27,0.82)" }, // same color as above but with opacity 0.7
 };
@@ -25,13 +25,12 @@ const globalComponentChanges = {
 };
 
 const typography = {
-  // regular fontSize will stay at 14px
-  // Use for the big title on the Homepage
+  // hi my name is Jason XB. I build things for the web
   h1: {
     fontFamily: `'Roboto', sans-serif`,
     fontSize: "3.75rem", // 60px
-    fontWeight: 300,
-    lineHeight: 2.267,
+    fontWeight: 700,
+    lineHeight: "normal",
     letterSpacing: "-0.01562em",
   },
   // Use for section headers on the homepage
@@ -73,6 +72,14 @@ const typography = {
     fontWeight: 500,
     lineHeight: 1.6,
     letterSpacing: "0.0075em",
+  },
+  p: {
+    fontSize: "1.25rem",
+    fontFamily: `'Roboto', sans-serif`,
+  },
+  span: {
+    fontFamily: `'Fira Code', monospace`,
+    color: "#64ffda",
   },
 };
 

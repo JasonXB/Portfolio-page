@@ -16,7 +16,7 @@ export default function NavAnchor(props) {
   );
 }
 const styles = {
-  txtSpan: (mui) => ({ color: mui.palette.info.main }),
+  txtSpan: (mui) => ({ color: mui.palette.header.main, fontSize: "1rem" }),
   // Colors link text on hover
   anchor: (mui) => ({
     "&:hover": { "*": { color: mui.palette.primary.main } },
