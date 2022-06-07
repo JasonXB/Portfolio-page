@@ -1,7 +1,6 @@
 import React from "react";
 import ThinLogo from "../custom-components/thinLogo";
-import ThickLogo from "../custom-components/boldLogo";
-import { Typography, Box, Stack, AppBar, Toolbar } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import NavAnchor from "../custom-components/reusable/NavAnchor";
 import ResumeButton from "../custom-components/ResumeButton";
 import { navbarBP } from "../../styles/breakpoints";

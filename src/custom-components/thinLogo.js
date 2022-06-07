@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 function Icon(props) {
   const { color } = props; // can use alt color using props
   return (
-    <Box sx={{ width: "50px", height: "50px" }}>
+    <Box sx={{ width: "50px", height: "50px", userSelect: "none" }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         shapeRendering="geometricPrecision"
