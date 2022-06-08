@@ -9,7 +9,7 @@ export const introBP = {
 };
 
 export const containerDims = {
-  px: "1rem",
+  px: "2rem",
   mt: "5rem",
   mb: "5rem",
   [introBP.minWidth]: { mt: "10rem", mb: "10rem" },

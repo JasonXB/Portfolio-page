@@ -1,29 +1,31 @@
 import React from "react";
 import SkillIcon from "./SkillIcon";
-import { Box , Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { mxn } from "../../../styles/mixins";
 
-export default function SkillGroup({ genre, dataObj }) {
+export default function SkillGroup({ genre, data }) {
+  const styles = {
+    container: { mb: "2rem" },
+    genre: { mb: "1rem", height: "3.75rem" },
+    languageRow: {
+      display: "grid",
+      gridTemplateColumns: `repeat(${data.length}, auto)`,
+      gap: "1rem",
+      justifyContent: "start",
+      width: "auto",
+    },
+  };
+
   return (
     <Box sx={styles.container}>
       <Typography variant="h4" color="secondary" sx={styles.genre}>
         {genre}
       </Typography>
       <Box sx={styles.languageRow}>
-        {dataObj.map((obj, i) => (
+        {data.map((obj, i) => (
           <SkillIcon key={i} skill={obj.lang} imgLink={obj.url} alt={obj.alt} />
         ))}
       </Box>
     </Box>
   );
 }
-
-const styles = {
-  container: { mb: "2rem" },
-  genre: { mb: "1rem" },
-  languageRow: {
-    ...mxn.flexRow,
-    justifyContent: "space-between",
-    alignItems: "end",
-  },
-};

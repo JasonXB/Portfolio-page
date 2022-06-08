@@ -60,18 +60,28 @@ export default function Skills() {
           Skills
         </Typography>
       </Box>
-      <Stack>
-        <SkillGroup genre="Core Languages" dataObj={core} />
-        <SkillGroup genre="Databases" dataObj={databases} />
-        <SkillGroup genre="Authentication" dataObj={authentication} />
-        <SkillGroup genre="Hosting Services" dataObj={hosting} />
+      <Stack sx={styles.skillgroups}>
+        <SkillGroup genre="Core Languages" data={core} />
+
         <SkillGroup
-          genre="Package Managers + Module Bundlers"
-          dataObj={pkgManagersBundlers}
+          genre="Package Managers + Bundlers"
+          data={pkgManagersBundlers}
         />
-        <SkillGroup genre="Version Control" dataObj={versionControl} />
-        <SkillGroup genre="Currently Learning" dataObj={future} />
+        <SkillGroup genre="Version Control" data={versionControl} />
+        <SkillGroup genre="Databases" data={databases} />
+        <SkillGroup genre="Hosting Services" data={hosting} />
+        <SkillGroup genre={`Authentication + Emailing`} data={authentication} />
+
+        {/* <SkillGroup genre="Currently Learning" data={future} /> */}
       </Stack>
     </Box>
   );
 }
+
+const styles = {
+  skillgroups: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    ["@media (min-width: 1080px)"]: { gridTemplateColumns: "1fr 1fr 1fr" },
+  },
+};
