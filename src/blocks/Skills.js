@@ -3,6 +3,7 @@ import { Typography, Box, Stack, Container } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import { containerDims } from "../../styles/breakpoints";
 import SkillIcon from "../custom-components/reusable/SkillIcon";
+import SkillGroup from "../custom-components/reusable/SkillGroup";
 
 export default function Skills() {
   const core = [
@@ -18,7 +19,7 @@ export default function Skills() {
   ];
   const databases = [
     { lang: "Firebase", url: "/skills/firebase.svg", alt: "Firebase logo" },
-    { lang: "MongoDB", url: "/skills/mongodb.svg", alt: "Mongo DB logo" },
+    { lang: "MongoDB", url: "/skills/mongodb.png", alt: "Mongo DB logo" },
   ];
   const authentication = [
     { lang: "Auth0", url: "/skills/oauth.svg", alt: "OAuth logo" },
@@ -39,12 +40,13 @@ export default function Skills() {
     { lang: "Git", url: "/skills/git.svg", alt: "Git logo" },
     { lang: "Github", url: "/skills/github.svg", alt: "Github logo" },
     { lang: "Git bash", url: "/skills/gitbash.svg", alt: "Gitbash logo" },
-    // { lang: "Sendgrid", url: "/skills/sendgrid.png", alt: "Sendgrid logo" },
   ];
   const future = [
     { lang: "Typescript", url: "/skills/typescript.svg", alt: "TS logo" },
     { lang: "Node.js", url: "/skills/nodejs.svg", alt: "Node logo" },
   ];
+
+  const allSkills = [core, frameworks, databases, authentication,hosting, pkgManagersBundlers, versionControl, future]; // prettier-ignore
   //! Refactor all 02. skills sets of elements
   return (
     <Box sx={containerDims}>
@@ -60,124 +62,22 @@ export default function Skills() {
         </Typography>
       </Box>
       <Stack>
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Core Languages
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {core.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Frameworks
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {frameworks.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Package Managers + Bundlers
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {pkgManagersBundlers.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Version Control
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {versionControl.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Databases
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {databases.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Authentication + Automated Emails
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {authentication.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Hosting Services
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {hosting.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
-
-        
-
-        <Typography variant="h4" color="secondary" sx={styles.genre}>
-          Currently working on
-        </Typography>
-        <Box sx={styles.languageRow}>
-          {future.map((obj, i) => (
-            <SkillIcon
-              key={i}
-              skill={obj.lang}
-              imgLink={obj.url}
-              alt={obj.alt}
-            />
-          ))}
-        </Box>
+        <SkillGroup genre="Core Languages" dataObj={core} />
+        <SkillGroup genre="Databases" dataObj={databases} />
+        <SkillGroup genre="Authentication" dataObj={authentication} />
+        <SkillGroup genre="Hosting Services" dataObj={hosting} />
+        <SkillGroup
+          genre="Package Managers + Module Bundlers"
+          dataObj={pkgManagersBundlers}
+        />
+        <SkillGroup genre="Version Control" dataObj={versionControl} />
+        <SkillGroup genre="Currently Learning" dataObj={future} />
       </Stack>
     </Box>
   );
 }
 
+//! delete
 const styles = {
   genre: { mb: "1rem" },
   languageRow: {
