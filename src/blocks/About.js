@@ -19,7 +19,7 @@ export default function About() {
         </Typography>
       </Box>
       <Container sx={{ ...mxn.flexRow, alignItems: "start" }}>
-        <Stack sx={{ minWidth: "525px", mr: "3.125rem" }}>
+        <Stack sx={{  mr: "3.125rem" }}>
           <Typography
             variant="p"
             color="secondary"
