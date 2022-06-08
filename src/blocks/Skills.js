@@ -77,12 +77,3 @@ export default function Skills() {
   );
 }
 
-//! delete
-const styles = {
-  genre: { mb: "1rem" },
-  languageRow: {
-    ...mxn.flexRow,
-    justifyContent: "space-between",
-    alignItems: "end",
-  },
-};
