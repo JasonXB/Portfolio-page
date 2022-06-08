@@ -2,7 +2,6 @@ import React from "react";
 import { Typography, Box, Stack, Container } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import { containerDims } from "../../styles/breakpoints";
-import SkillIcon from "../custom-components/reusable/SkillIcon";
 import SkillGroup from "../custom-components/reusable/SkillGroup";
 
 export default function Skills() {
@@ -10,7 +9,7 @@ export default function Skills() {
     { lang: "HTML", url: "/skills/html.svg", alt: "HTML logo" },
     { lang: "CSS", url: "/skills/css.svg", alt: "CSS logo" },
     { lang: "SCSS", url: "/skills/scss.png", alt: "SCSS logo" },
-    { lang: "JavaScript", url: "/skills/javascript.svg", alt: "JS logo" },
+    { lang: "Javascript", url: "/skills/javascript.svg", alt: "JS logo" },
   ];
   const frameworks = [
     { lang: "React.js", url: "/skills/react.svg", alt: "React logo" },
@@ -23,7 +22,7 @@ export default function Skills() {
   ];
   const authentication = [
     { lang: "Auth0", url: "/skills/oauth.svg", alt: "OAuth logo" },
-    { lang: "Next Auth", url: "/skills/nextauth.png", alt: "Next.js logo" },
+    { lang: "NextAuth", url: "/skills/nextauth.png", alt: "Next Auth logo" },
     { lang: "Sendgrid", url: "/skills/sendgrid.png", alt: "Sendgrid logo" },
   ];
   const hosting = [
@@ -76,4 +75,3 @@ export default function Skills() {
     </Box>
   );
 }
-
