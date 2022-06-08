@@ -18,25 +18,17 @@ export default function About() {
           About Me
         </Typography>
       </Box>
-      <Container sx={{ ...mxn.flexRow, alignItems: "start" }}>
-        <Stack sx={{  mr: "3.125rem" }}>
-          <Typography
-            variant="p"
-            color="secondary"
-            sx={{ maxWidth: "550px", mb: 2 }}
-          >
-            {" "}
-            My interest in coding started back in 2016 while completing
-            my degree in Mechanical Engineering. Back then we used Python and
-            C++ to program remote-controlled and autonomous robotic vehicles. This led me
-            down the design rabbit hole.
-          </Typography>
-          <Typography variant="p" color="secondary" sx={{ maxWidth: "550px" }}>
-            Over the years I learned how to create my own physical products, so
-            naturally the next step was to go digital! After a year of
-            self-teaching, building personal projects, and losing my mind fixing
-            really obscure bugs, I'm finally ready to make the leap and go pro. Wish me luck! 😄
-          </Typography>
+      <Container
+        sx={{
+          ...mxn.flexRow,
+          alignItems: "start",
+          background: "rgba(2,12,27,0.82)",
+        }}
+      >
+        <Stack sx={{ mr: "3.125rem" }}>
+          <Typography>NAME:</Typography>
+          <Typography>AGE:</Typography>
+          <Typography>EMAIL:</Typography>
         </Stack>
         {/* <img src="/images/me.jpg" alt="Photo of Jason XB" /> */}
       </Container>
