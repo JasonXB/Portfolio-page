@@ -33,7 +33,7 @@ const typography = {
     lineHeight: "normal",
     letterSpacing: "-0.01562em",
   },
-  
+
   h2: {
     fontFamily: `'Roboto', sans-serif`,
     fontSize: "2.25rem", // 36px
@@ -51,9 +51,9 @@ const typography = {
     // letterSpacing: "-0em",
   },
   h4: {
-    fontFamily: `'Fira Code', monospace`,
+    fontFamily: `'Orbitron', sans-serif;`,
     fontSize: "1.5rem", // 24px
-    fontWeight: 400,
+    fontWeight: 600,
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
   },
