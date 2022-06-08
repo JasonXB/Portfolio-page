@@ -1,10 +1,18 @@
 import React from "react";
 import { Typography, Box, Stack } from "@mui/material";
-export default function SkillIcon({ skill, imgLink, alt }) {
+import { mxn } from "../../../styles/mixins";
+
+export default function SkillIcon({ skill, imgLink, alt, isPNG = false }) {
   return (
-    <Stack>
-      <img src={imgLink} alt={alt} style={{ width: "50px" }} />
-      <Typography variant="p">{skill}</Typography>
+    <Stack sx={mxn.flexColumn}>
+      <img
+        src={imgLink}
+        alt={alt}
+        style={{ width: isPNG ? "50px" : "60px", marginBottom: "0.75rem" }}
+      />
+      <Typography variant="p" sx={{ color: "#8892b0" }}>
+        {skill}
+      </Typography>
     </Stack>
   );
 }

@@ -56,9 +56,10 @@ export default function Skills() {
         </Typography>
       </Box>
       <Stack>
-        <Typography variant="p">CORE LANGUAGES</Typography>
+        <Typography variant="h4">CORE LANGUAGES</Typography>
         {/* <SkillIcon skill="React" imgLink="/images/me.jpg" alt="react logo" /> */}
         <SkillIcon skill="React" imgLink="/skills/css.svg" alt="react logo" />
+        <SkillIcon skill="React" imgLink="/skills/nextauth.png" isPNG="true" alt="react logo" />
         {/* <Typography variant="">FRAMEWORKS</Typography> */}
       </Stack>
     </Box>
