@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Box, Stack, Container } from "@mui/material";
-import { mxn } from "../../styles/mixins";
-import { containerDims } from "../../styles/breakpoints";
+import { Stack } from "@mui/material";
+import SectionBlock from "../custom-components/reusable/SectionBlock";
 import SkillGroup from "../custom-components/reusable/SkillGroup";
 import { skillsBP } from "../../styles/breakpoints";
+import NumberedHeader from "../custom-components/reusable/NumberedHeader";
+
 export default function Skills() {
   const core = [
     { lang: "HTML", url: "/skills/html.svg", alt: "HTML logo" },
@@ -48,18 +49,8 @@ export default function Skills() {
   const allSkills = [core, frameworks, databases, authentication,hosting, pkgManagersBundlers, versionControl, future]; // prettier-ignore
   //! Refactor all 02. skills sets of elements
   return (
-    <Box sx={containerDims}>
-      <Box sx={{ ...mxn.flexRow, alignItems: "end", mb: "2.25rem" }}>
-        <Typography variant="span" sx={{ fontSize: "1.25rem", mr: 1 }}>
-          02.
-        </Typography>
-        <Typography
-          variant="h3"
-          sx={(mui) => ({ color: mui.palette.header.main })}
-        >
-          Skills
-        </Typography>
-      </Box>
+    <SectionBlock>
+      <NumberedHeader num="02." txt="Skills" />
       <Stack sx={styles.skillgroups}>
         <SkillGroup genre="Core Languages" data={core} />
 
@@ -74,7 +65,7 @@ export default function Skills() {
 
         {/* <SkillGroup genre="Currently Learning" data={future} /> */}
       </Stack>
-    </Box>
+    </SectionBlock>
   );
 }
 

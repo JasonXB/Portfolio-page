@@ -1,23 +1,13 @@
 import React from "react";
 import { Typography, Box, Stack, Container } from "@mui/material";
 import { mxn } from "../../styles/mixins";
-import { containerDims } from "../../styles/breakpoints";
+import SectionBlock from "../custom-components/reusable/SectionBlock";
+import NumberedHeader from "../custom-components/reusable/NumberedHeader";
 
 export default function About() {
-  // maxWidth 700 on Brit
   return (
-    <Box sx={containerDims}>
-      <Box sx={{ ...mxn.flexRow, alignItems: "end", mb: "2.25rem" }}>
-        <Typography variant="span" sx={{ fontSize: "1.25rem", mr: 1 }}>
-          01.
-        </Typography>
-        <Typography
-          variant="h3"
-          sx={(mui) => ({ color: mui.palette.header.main })}
-        >
-          About Me
-        </Typography>
-      </Box>
+    <SectionBlock>
+      <NumberedHeader num="01." txt="About Me" />
       <Container
         sx={{
           ...mxn.flexRow,
@@ -32,6 +22,6 @@ export default function About() {
         </Stack>
         {/* <img src="/images/me.jpg" alt="Photo of Jason XB" /> */}
       </Container>
-    </Box>
+    </SectionBlock>
   );
 }
