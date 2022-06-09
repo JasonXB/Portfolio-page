@@ -1,23 +1,11 @@
 =========== CORE FIXES ================
 
 - The 2 sets of anchor links in both navbars lead nowhere
-- The colors for the navbar are not set properly to go with each theme
 - You have an empty set of p tags in Navbar_Desktop
-
-============= LEARN ==================
-Wavy lines with distinct colors:
-https://www.youtube.com/watch?v=0QTzTOJCzLY&ab_channel=BrandonStiles%2CFrontEndDeveloper
-https://www.youtube.com/watch?v=3owx2vJHkv4&ab_channel=RedStapler
-
-Parallax sky:
-https://www.youtube.com/watch?v=aywzn9cf-_U&ab_channel=WebDevSHORTS
-
-Neon lights text:
-https://www.youtube.com/results?search_query=neon+text+css
-
-Advanced Typography:
-https://www.youtube.com/watch?v=wARbgs5Fmuw&ab_channel=KevinPowell
-https://www.youtube.com/watch?v=fs9uJ7I4a70&ab_channel=KevinPowell
+- Make each header have a divider extension that goes out to a set distance despite the text
+- Social media handles on the left margin side (absolute)
+- Hover filter for logo
+- 
 
 ============ LATE GAME =================
 Resume button needs to trigger a resume download

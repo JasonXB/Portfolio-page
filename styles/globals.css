@@ -1,19 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
-/* //!! condense into 1 import line using Google Fonts IE*/
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Orbitron:wght@400;500;600&family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
 /* 
 font-family: 'Roboto Mono', monospace;  COMPUTER TEXT
-
 font-family: 'Concert One', cursive;    LOGO TEXT
 font-family: 'Roboto', sans-serif;      REGULAR TEXT
 */
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* regular text */
 }
 span {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", monospace; /* small green text */
 }
 html {
   margin: 0;
