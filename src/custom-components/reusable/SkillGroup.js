@@ -2,11 +2,15 @@ import React from "react";
 import SkillIcon from "./SkillIcon";
 import { Box, Typography } from "@mui/material";
 import { mxn } from "../../../styles/mixins";
+import { skillsBP } from "../../../styles/breakpoints";
 
 export default function SkillGroup({ genre, data }) {
   const styles = {
     container: { mb: "2rem" },
-    genre: { mb: "1rem", ["@media (min-width: 650px)"]: { height: "3.75rem" } },
+    genre: {
+      mb: "1rem",
+      [skillsBP.twoColumns]: { height: "3.75rem" },
+    },
     languageRow: {
       display: "grid",
       gridTemplateColumns: `repeat(${data.length}, auto)`,

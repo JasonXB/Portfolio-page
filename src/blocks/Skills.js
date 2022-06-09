@@ -3,7 +3,7 @@ import { Typography, Box, Stack, Container } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import { containerDims } from "../../styles/breakpoints";
 import SkillGroup from "../custom-components/reusable/SkillGroup";
-
+import { skillsBP } from "../../styles/breakpoints";
 export default function Skills() {
   const core = [
     { lang: "HTML", url: "/skills/html.svg", alt: "HTML logo" },
@@ -82,7 +82,7 @@ const styles = {
   skillgroups: {
     display: "grid",
     gap: "1rem",
-    ["@media (min-width: 650px)"]: { gridTemplateColumns: "1fr 1fr" },
+    [skillsBP.twoColumns]: { gridTemplateColumns: "1fr 1fr" },
     ["@media (min-width: 1080px)"]: { gridTemplateColumns: "1fr 1fr 1fr" },
   },
 };
