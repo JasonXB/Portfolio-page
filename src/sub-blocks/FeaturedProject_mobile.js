@@ -8,10 +8,11 @@ import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { mxn } from "../../styles/mixins";
 import Link from "@mui/material/Link";
+
 //=
-export default function FeaturedProject_mobile({ dataObj }) {
-  const { level, projectName, description, tools, githubLink, hostedLink, img } = dataObj; // prettier-ignore
-  const toolsUsed = "";
+export default function FeaturedProject_mobile({ dataObj, mb }) {
+  const { projectName, description, tools, githubLink, hostedLink, img } = dataObj; // prettier-ignore
+
   const [used, setUsed] = React.useState("");
 
   React.useEffect(() => {
@@ -24,7 +25,16 @@ export default function FeaturedProject_mobile({ dataObj }) {
   }, [tools]);
 
   return (
-    <Card sx={(mui) => ({ ...styles.border(mui), maxWidth: 345 })}>
+    <Card
+      sx={(mui) => ({
+        ...styles.border(mui),
+        maxWidth: 400,
+        mx: "auto",
+        mb: mb,
+        background: mui.palette.cardBg.main,
+        ["@media (min-width: 800px)"]: { mb: 0}
+      })}
+    >
       <CardMedia
         component="img"
         height="140"
@@ -74,8 +84,8 @@ export default function FeaturedProject_mobile({ dataObj }) {
           background: mui.palette.cardBg.main,
           display: "flex",
           justifyContent: "center",
-          p:2,
-          pt:0
+          p: 2,
+          pt: 0,
         })}
       >
         <Link

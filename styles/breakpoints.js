@@ -17,3 +17,8 @@ export const containerDims = {
 };
 
 export const skillsBP = { twoColumns: "@media (min-width: 650px)" };
+
+export const projectsBP = {
+  layoutChange1 : "@media (min-width: 800px)",
+  // layoutChange2: "@media (min-width: 1200px)",
+}
