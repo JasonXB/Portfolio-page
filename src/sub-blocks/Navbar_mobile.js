@@ -28,12 +28,13 @@ export default function ButtonAppBar() {
       <AppBar position="static" color="bg" sx={{ boxShadow: "none" }}>
         <Toolbar sx={{ ...styles.spaceBetween }}>
           <ThinLogo />
+          {/* The burger icon */}
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={(mui) => ({ color: mui.palette.primary.main })}
+            sx={(mui) => ({ color: mui.palette.primary.main, p: 0 })}
             onClick={() => toggleDrawer()}
           >
             <MenuIcon sx={{ fontSize: "2.5rem" }} />
