@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
       {/* <Intro /> */}
       {/* <About /> */}
-      {/* <Skills/> */}
       <Projects />
+      <Skills/>
       <Box sx={{ height: "500vh" }}></Box>
     </PaddedBlock>
   );

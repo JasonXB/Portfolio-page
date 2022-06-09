@@ -1,7 +1,7 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import { Typography, Box, Stack, Divider, Link } from "@mui/material";
+import { Box, Stack, Divider } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThinLogo from "../custom-components/thinLogo";

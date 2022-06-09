@@ -4,6 +4,7 @@ import { AppBar, Toolbar } from "@mui/material";
 import NavAnchor from "../custom-components/reusable/NavAnchor";
 import ResumeButton from "../custom-components/ResumeButton";
 import { navbarBP } from "../../styles/breakpoints";
+
 export default function Navbar_desktop() {
   return (
     <AppBar
