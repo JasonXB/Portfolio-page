@@ -6,7 +6,7 @@ import { mxn } from "../../../styles/mixins";
 export default function SkillGroup({ genre, data }) {
   const styles = {
     container: { mb: "2rem" },
-    genre: { mb: "1rem", height: "3.75rem" },
+    genre: { mb: "1rem", ["@media (min-width: 650px)"]: { height: "3.75rem" } },
     languageRow: {
       display: "grid",
       gridTemplateColumns: `repeat(${data.length}, auto)`,

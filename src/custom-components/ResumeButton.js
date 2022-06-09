@@ -18,7 +18,7 @@ export default function ResumeButton({ customVariant }) {
           mx: "auto",
           color: "white",
           borderColor: "white",
-          mt: 0,
+          mt: 2,
           mb: 2,
           ["@media (max-width: 400px)"]: { width: "100%"}
         }}

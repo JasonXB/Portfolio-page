@@ -7,8 +7,8 @@ import SkillGroup from "../custom-components/reusable/SkillGroup";
 export default function Skills() {
   const core = [
     { lang: "HTML", url: "/skills/html.svg", alt: "HTML logo" },
-    { lang: "CSS", url: "/skills/css.svg", alt: "CSS logo" },
-    { lang: "SCSS", url: "/skills/scss.png", alt: "SCSS logo" },
+    { lang: "CSS/SCSS", url: "/skills/css.svg", alt: "CSS logo" },
+    // { lang: "SCSS", url: "/skills/scss.png", alt: "SCSS logo" },
     { lang: "Javascript", url: "/skills/javascript.svg", alt: "JS logo" },
   ];
   const frameworks = [
@@ -81,7 +81,8 @@ export default function Skills() {
 const styles = {
   skillgroups: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
+    gap: "1rem",
+    ["@media (min-width: 650px)"]: { gridTemplateColumns: "1fr 1fr" },
     ["@media (min-width: 1080px)"]: { gridTemplateColumns: "1fr 1fr 1fr" },
   },
 };
