@@ -10,21 +10,21 @@ import { mxn } from "../../styles/mixins";
 export default function Projects() {
   const localEats = {
     odd: false,
-    level: "Full stack",
+    level: "Full stack web app",
     projectName: "Local Eats",
     description:
-      "Lets users search for restaurants near them and anywhere across Canada/USA. Features include filtered local business searches, credentials-based signup and login, bookmarks, and geolocation",
-    tools: ["Next.js", "React.js", "Javascript", "Node", "Yarn", "NextAuth", "Sendgrid", 'HTML & CSS'], // prettier-ignore
+      "Full stack web app that lets users search for restaurants near them and anywhere across Canada/USA. Features include filtered local business searches, credentials-based signup and login, bookmarks, and geolocation",
+    tools: ["Next.js", "React.js", "Javascript", "Node", "Yarn", "NextAuth", "SendGrid", 'HTML & CSS'], // prettier-ignore
     githubLink: "https://github.com/JasonxPortfolio/local-eats",
     hostedLink: "https://localeats.vercel.app/",
     img: "/images/localeats_preview.png",
   };
   const smashBros = {
     odd: true,
-    level: "Front-end",
-    projectName: "Smash-Bros Sales Page",
+    level: "Landing page",
+    projectName: "Smash Bros Ultimate",
     description:
-      "A fully responsive landing page for the Nintendo Switch's highest selling game",
+      "A fully responsive and professional-looking landing page for the Nintendo Switch's highest selling game",
     tools: ["HTML & CSS", "Javascript", "NPM", "Parcel"],
     githubLink: "https://github.com/JasonxPortfolio/Smash_bros_page",
     hostedLink: "https://smashbrosultimate.vercel.app/",
@@ -32,10 +32,10 @@ export default function Projects() {
   };
   const monstercat = {
     odd: false,
-    level: "Front-end",
-    projectName: "Monstercat Landing Page",
+    level: "Landing page",
+    projectName: "Monstercat",
     description:
-      "A responsive replica of the Monstercat Music site. This is one of the first landing pages I built once I finished learning CSS.",
+      "A replica for one of Monstercat Music's dedicated artist pages. This is one of the first landing pages I built once I finished my CSS courses.",
     tools: ["HTML & CSS"],
     githubLink: "https://github.com/Jason2B3/Monstercat",
     hostedLink: "https://monstercat.netlify.app/",
@@ -58,6 +58,6 @@ const styles = {
   projectColumn: {
     display: "grid",
     gap: "2rem",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 };
