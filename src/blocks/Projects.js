@@ -12,17 +12,17 @@ export default function Projects() {
     <SectionBlock>
       <NumberedHeader num="03." txt="Projects" />
       {/* For Mobile screens */}
-      <Stack sx={{ [projectsBP.layoutChange2]: { display: "none" } }}>
+      <Stack sx={{ [projectsBP.layoutChange]: { display: "none" } }}>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>
           Full-stack Sites
         </Typography>
-        <Box sx={{ [projectsBP.layoutChange1]: { mb: "4rem" } }}>
+        <Box sx={{ [projectsBP.layoutChange]: { mb: "4rem" } }}>
           <FeaturedProject_mobile dataObj={localEats} mb="4rem" />
         </Box>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>
           Landing Pages
         </Typography>
-        <Box sx={mobileStyles.landingPages}>
+        <Box>
           <FeaturedProject_mobile dataObj={smashBros} mb="2rem" />
           <FeaturedProject_mobile dataObj={monstercat} mb="4rem" />
         </Box>
@@ -60,20 +60,13 @@ const mobileStyles = {
     },
   },
   subheader: { mb: "2rem", textAlign: "center" },
-  landingPages: {
-    // [projectsBP.layoutChange1]: {
-    //   mb: "4rem",
-    //   display: "grid",
-    //   gridTemplateColumns: "1fr 1fr",
-    //   gap: 2,
-    // },
-  },
+  
 };
 
 const desktopStyles = {
   containers: {
     display: "none",
-    [projectsBP.layoutChange2]: {
+    [projectsBP.layoutChange]: {
       display: "block",
     },
   },

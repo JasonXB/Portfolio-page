@@ -92,13 +92,13 @@ const styles = {
     justifyContent: "center",
     p: 2,
     pt: 0,
-    [projectsBP.layoutChange1]: { alignSelf: "end" },
+    [projectsBP.layoutChange]: { alignSelf: "end" },
   }),
   card: {
     maxWidth: 400,
     mx: "auto",
     // Use grid to push links to bottom of cell
-    [projectsBP.layoutChange1]: {
+    [projectsBP.layoutChange]: {
       mb: 0,
       display: "grid",
     },
