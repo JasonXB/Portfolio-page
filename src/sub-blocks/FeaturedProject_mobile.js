@@ -27,12 +27,10 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
   return (
     <Card
       sx={(mui) => ({
-        ...styles.border(mui),
-        maxWidth: 400,
-        mx: "auto",
-        mb: mb,
         background: mui.palette.cardBg.main,
-        ["@media (min-width: 800px)"]: { mb: 0}
+        border: `2px solid ${mui.palette.secondary.main}`,
+        mb: mb, // changes at 800px 
+        ...styles.card,
       })}
     >
       <CardMedia
@@ -46,21 +44,14 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
           gutterBottom
           variant="h5"
           component="div"
-          color="info"
-          sx={(mui) => ({
-            textAlign: "center",
-            color: mui.palette.header.main,
-          })}
+          sx={(mui) => styles.projectName(mui)}
         >
           {projectName}
         </Typography>
         <Typography
           variant="body2"
           color="secondary"
-          sx={(mui) => ({
-            textAlign: "center",
-            color: mui.palette.secondary.main,
-          })}
+          sx={{ textAlign: "center" }}
         >
           {description}
         </Typography>
@@ -69,25 +60,12 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
       <Typography
         variant="body2"
         color="secondary"
-        sx={(mui) => ({
-          textAlign: "center",
-          background: mui.palette.cardBg.main,
-          px: 2,
-          pb: 2,
-        })}
+        sx={(mui) => styles.tools(mui)}
       >
         Built with {used}
       </Typography>
 
-      <CardActions
-        sx={(mui) => ({
-          background: mui.palette.cardBg.main,
-          display: "flex",
-          justifyContent: "center",
-          p: 2,
-          pt: 0,
-        })}
-      >
+      <CardActions sx={(mui) => styles.cardActions(mui)}>
         <Link
           href={hostedLink}
           underline="none"
@@ -110,5 +88,26 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
 }
 
 const styles = {
-  border: (mui) => ({ border: `2px solid ${mui.palette.secondary.main}` }),
+  projectName: (mui) => ({
+    textAlign: "center",
+    color: mui.palette.header.main,
+  }),
+  tools: (mui) => ({
+    textAlign: "center",
+    background: mui.palette.cardBg.main,
+    px: 2,
+    pb: 2,
+  }),
+  cardActions: (mui) => ({
+    background: mui.palette.cardBg.main,
+    display: "flex",
+    justifyContent: "center",
+    p: 2,
+    pt: 0,
+  }),
+  card: {
+    maxWidth: 400,
+    mx: "auto",
+    ["@media (min-width: 800px)"]: { mb: 0 },
+  },
 };
