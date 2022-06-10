@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <PaddedBlock>
       <Navbar />
-      {/* <Intro /> */}
+      <Intro />
       {/* <About /> */}
       <Projects />
       <Skills/>

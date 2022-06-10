@@ -10,7 +10,7 @@ export default function NumberedHeader(props) {
         {num}
       </Typography>
       <Typography
-        variant="h3"
+        variant="h2"
         sx={(mui) => ({ color: mui.palette.header.main })}
       >
         {txt}

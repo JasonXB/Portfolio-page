@@ -22,7 +22,7 @@ export default function SkillGroup({ genre, data }) {
 
   return (
     <Box sx={styles.container}>
-      <Typography variant="h4" color="secondary" sx={styles.genre}>
+      <Typography variant="h3" color="secondary" sx={styles.genre}>
         {genre}
       </Typography>
       <Box sx={styles.languageRow}>

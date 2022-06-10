@@ -31,33 +31,33 @@ const typography = {
     fontSize: "3.75rem", // 60px
     fontWeight: 700,
     lineHeight: "normal",
-    letterSpacing: "-0.01562em",
-  },
-
-  h2: {
-    fontFamily: `'Roboto', sans-serif`,
-    fontSize: "2.25rem", // 36px
-    fontWeight: 400,
-    lineHeight: 1.2,
-    letterSpacing: "-0em",
-    marginBottom: "1.875rem",
+    // letterSpacing: "-0.01562em",
   },
   // 01 02 03 04 headers
-  h3: {
+  h2: {
     fontFamily: `'Roboto', sans-serif`,
-    fontSize: "2rem",
+    fontSize: "2rem", // 32px
     fontWeight: 600,
     lineHeight: 1.167,
-    // letterSpacing: "-0em",
+    letterSpacing: "0.00935em",
   },
-  h4: {
+  // Sub headers for each section (like Full-stack web apps)
+  h3: {
     fontFamily: `'Orbitron', sans-serif;`,
     fontSize: "1.5rem", // 24px
     fontWeight: 600,
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
   },
-  // Use for the homepage's expensive/cheap cards
+
+  h4: {
+    fontFamily: `'Fira Code', monospace`,
+    fontSize: "1.5rem", // 24px
+    fontWeight: 600,
+    lineHeight: 1.235,
+    letterSpacing: "0.00735em",
+    color:"#ccd6f6"
+  },
   h5: {
     fontFamily: `'Fira Code', monospace`,
     fontSize: "1.25rem", // 20px
@@ -65,7 +65,6 @@ const typography = {
     lineHeight: 1.334,
     letterSpacing: "0em",
   },
-  // Use for descriptions underneath new section headers
   h6: {
     fontFamily: `'Fira Code', monospace`,
     fontSize: "1.125rem", // 18px
