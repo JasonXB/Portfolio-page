@@ -1,6 +1,5 @@
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LogoutIcon from "@mui/icons-material/Logout";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import IconButton from "@mui/material/IconButton";
 import { Typography, Box, Stack } from "@mui/material";
@@ -10,12 +9,17 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
   const { projectName, description, githubLink, hostedLink, img, tools } = dataObj; // prettier-ignore
   return (
     <Box sx={styles.container}>
-      <Box sx={styles.imgContainer}>
+      <Box component="a" sx={styles.imgContainer} href={hostedLink}>
         <Box component="img" src={img} sx={styles.img} />
       </Box>
       <Stack sx={styles.descrip}>
         <Box sx={{ mb: 2 }}>
-          <Typography variant="h4" sx={styles.projectName}>
+          <Typography
+            variant="h4"
+            component="a"
+            href={hostedLink}
+            sx={(mui) => styles.projectName(mui)}
+          >
             {projectName}
           </Typography>
           <Typography variant="p" color="secondary" sx={styles.projectDescrip}>
@@ -32,11 +36,12 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
             Built with the following languages:
           </Typography>
           <Box sx={styles.languageContainer}>
-            {tools.map((el) => (
+            {tools.map((el, i) => (
               <Typography
                 variant="span"
                 color="secondary"
                 sx={styles.languageSpan}
+                key={i}
               >
                 →&nbsp;{el}
               </Typography>
@@ -66,9 +71,14 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
 const styles = {
   descrip: { display: "grid", p: 3 },
   container: { display: "grid", gridTemplateColumns: "4fr 5fr", mb: 4 },
-  imgContainer: { width: "100%" },
+  imgContainer: { width: "100%", "&:hover": { "*": { cursor: "pointer" } } },
   img: { width: "100%", height: "100%", objectFit: "cover" },
-  projectName: { lineHeight: "normal", mb: 1 },
+  projectName: (mui) => ({
+    display: "block",
+    lineHeight: "normal",
+    mb: 1,
+    "&:hover": { cursor: "pointer", color: mui.palette.primary.main },
+  }),
   projectDescrip: { maxWidth: "525px", mb: 1.5, fontSize: "1rem" },
   languageContainer: {
     maxWidth: "450px",

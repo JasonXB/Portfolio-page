@@ -3,15 +3,14 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { mxn } from "../../styles/mixins";
 import Link from "@mui/material/Link";
 import { projectsBP } from "../../styles/breakpoints";
-//=
+// import useRedirect from "../utility-functions/useRedirect";
+
 export default function FeaturedProject_mobile({ dataObj, mb }) {
   const { projectName, description, githubLink, hostedLink, img, toolsString } = dataObj; // prettier-ignore
+  // const redirect = useRedirect(hostedLink);
   return (
     <Card
       sx={(mui) => ({
@@ -26,12 +25,16 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
         height="140"
         image={img}
         sx={{ borderBottom: "2px solid #8892b0" }}
+        // onClick={() => redirect()}
+        // We choose not to redirect users clicking the img on mobile
+        // This is different on desktop screens
       />
       <CardContent sx={(mui) => ({ background: mui.palette.cardBg.main })}>
         <Typography
           gutterBottom
           variant="h5"
-          component="div"
+          component="a"
+          href={hostedLink}
           sx={(mui) => styles.projectName(mui)}
         >
           {projectName}
@@ -77,8 +80,10 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
 
 const styles = {
   projectName: (mui) => ({
+    display: "block",
     textAlign: "center",
     color: mui.palette.header.main,
+    "&:hover": { cursor: "pointer", color: mui.palette.primary.main },
   }),
   tools: (mui) => ({
     textAlign: "center",
