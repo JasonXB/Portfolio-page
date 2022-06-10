@@ -1,9 +1,9 @@
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import IosShareIcon from "@mui/icons-material/IosShare";
 import IconButton from "@mui/material/IconButton";
 import { Typography, Box, Stack } from "@mui/material";
 import { mxn } from "../../styles/mixins";
+import MoveUpIcon from '@mui/icons-material/MoveUp';
 //=
 export default function FeaturedProject_desktop({ dataObj, mb }) {
   const { projectName, description, githubLink, hostedLink, img, tools } = dataObj; // prettier-ignore
@@ -57,7 +57,7 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
             />
           </IconButton>
           <IconButton href={hostedLink}>
-            <IosShareIcon
+            <MoveUpIcon
               fontSize="large"
               color="secondary"
               sx={(mui) => styles.icon(mui)}
