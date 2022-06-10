@@ -8,28 +8,16 @@ import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { mxn } from "../../styles/mixins";
 import Link from "@mui/material/Link";
-
+import { projectsBP } from "../../styles/breakpoints";
 //=
 export default function FeaturedProject_mobile({ dataObj, mb }) {
-  const { projectName, description, tools, githubLink, hostedLink, img } = dataObj; // prettier-ignore
-
-  const [used, setUsed] = React.useState("");
-
-  React.useEffect(() => {
-    let str = "";
-    tools.forEach((lang, i) => {
-      if (i === 0) str = lang;
-      else str += `, ${lang}`;
-    });
-    setUsed(str);
-  }, [tools]);
-
+  const { projectName, description, githubLink, hostedLink, img, toolsString } = dataObj; // prettier-ignore
   return (
     <Card
       sx={(mui) => ({
         background: mui.palette.cardBg.main,
         border: `2px solid ${mui.palette.secondary.main}`,
-        mb: mb, // changes at 800px 
+        mb: mb, // changes at 800px
         ...styles.card,
       })}
     >
@@ -62,7 +50,7 @@ export default function FeaturedProject_mobile({ dataObj, mb }) {
         color="secondary"
         sx={(mui) => styles.tools(mui)}
       >
-        Built with {used}
+        Built with {toolsString}
       </Typography>
 
       <CardActions sx={(mui) => styles.cardActions(mui)}>
@@ -104,10 +92,15 @@ const styles = {
     justifyContent: "center",
     p: 2,
     pt: 0,
+    [projectsBP.layoutChange1]: { alignSelf: "end" },
   }),
   card: {
     maxWidth: 400,
     mx: "auto",
-    ["@media (min-width: 800px)"]: { mb: 0 },
+    // Use grid to push links to bottom of cell
+    [projectsBP.layoutChange1]: {
+      mb: 0,
+      display: "grid",
+    },
   },
 };
