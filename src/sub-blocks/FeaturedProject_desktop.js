@@ -15,7 +15,7 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
       <Stack sx={styles.descrip}>
         <Box sx={{ mb: 2 }}>
           <Typography
-            variant="h4"
+            variant="h5"
             component="a"
             href={hostedLink}
             sx={(mui) => styles.projectName(mui)}

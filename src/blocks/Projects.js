@@ -14,13 +14,13 @@ export default function Projects() {
       {/* For Mobile screens */}
       <Stack sx={{ [projectsBP.layoutChange]: { display: "none" } }}>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>
-          Full-stack Sites
+          &nbsp;&nbsp;Full Stack&nbsp;&nbsp;
         </Typography>
         <Box sx={{ [projectsBP.layoutChange]: { mb: "4rem" } }}>
           <FeaturedProject_mobile dataObj={localEats} mb="4rem" />
         </Box>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>
-          Landing Pages
+          &nbsp;&nbsp;Landing Pages&nbsp;&nbsp;
         </Typography>
         <Box>
           <FeaturedProject_mobile dataObj={smashBros} mb="2rem" />
@@ -30,7 +30,7 @@ export default function Projects() {
       {/* For Desktop screens */}
       <Stack sx={desktopStyles.containers}>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>
-          Full-stack Sites
+        &nbsp;&nbsp;Full Stack Web Apps&nbsp;&nbsp;
         </Typography>
         <FeaturedProject_desktop dataObj={localEats} mb="4rem" />
         <Typography
@@ -38,7 +38,7 @@ export default function Projects() {
           color="secondary"
           sx={{ ...mobileStyles.subheader, mt: "3rem" }}
         >
-          Landing Pages
+          &nbsp;&nbsp;Landing Pages&nbsp;
         </Typography>
         <FeaturedProject_desktop dataObj={smashBros} mb="2rem" />
         <FeaturedProject_desktop dataObj={monstercat} mb="4rem" />
@@ -60,7 +60,6 @@ const mobileStyles = {
     },
   },
   subheader: { mb: "2rem", textAlign: "center" },
-  
 };
 
 const desktopStyles = {

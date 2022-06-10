@@ -41,29 +41,33 @@ const typography = {
     lineHeight: 1.167,
     letterSpacing: "0.00935em",
   },
-  // Sub headers for each section (like Full-stack web apps)
+  // Sub headers for projects section (like Full-stack web apps)
   h3: {
     fontFamily: `'Orbitron', sans-serif;`,
     fontSize: "1.5rem", // 24px
     fontWeight: 600,
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
+    
+    // use this trick to add ------dividers------ to headers
+    // https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle#:~:text=Here%20is%20Flex%20based%20solution.
   },
-
+ // Sub headers for skills section (like Full-stack web apps)
   h4: {
+    fontFamily: `'Orbitron', sans-serif;`,
+    fontSize: "1.5rem", // 24px
+    fontWeight: 600,
+    lineHeight: 1.235,
+    letterSpacing: "0.00735em",
+  },
+  // Names of portfolio projects
+  h5: {
     fontFamily: `'Fira Code', monospace`,
     fontSize: "1.5rem", // 24px
     fontWeight: 600,
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
     color:"#ccd6f6"
-  },
-  h5: {
-    fontFamily: `'Fira Code', monospace`,
-    fontSize: "1.25rem", // 20px
-    fontWeight: 400,
-    lineHeight: 1.334,
-    letterSpacing: "0em",
   },
   h6: {
     fontFamily: `'Fira Code', monospace`,
