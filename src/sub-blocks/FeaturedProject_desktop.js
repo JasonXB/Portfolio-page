@@ -2,7 +2,7 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LogoutIcon from "@mui/icons-material/Logout";
 import IosShareIcon from "@mui/icons-material/IosShare";
-import LinkIcon from "@mui/icons-material/Link";
+import IconButton from "@mui/material/IconButton";
 import { Typography, Box, Stack } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 //=
@@ -44,8 +44,20 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
           </Box>
         </Stack>
         <Box sx={{ ...mxn.flexRow }}>
-          <GitHubIcon fontSize="large" color="secondary" sx={styles.icon} />
-          <IosShareIcon fontSize="large" color="secondary" sx={styles.icon} />
+          <IconButton href={githubLink}>
+            <GitHubIcon
+              fontSize="large"
+              color="secondary"
+              sx={(mui) => styles.icon(mui)}
+            />
+          </IconButton>
+          <IconButton href={hostedLink}>
+            <IosShareIcon
+              fontSize="large"
+              color="secondary"
+              sx={(mui) => styles.icon(mui)}
+            />
+          </IconButton>
         </Box>
       </Stack>
     </Box>
@@ -53,8 +65,8 @@ export default function FeaturedProject_desktop({ dataObj, mb }) {
 }
 const styles = {
   descrip: { display: "grid", p: 3 },
-  container: { display: "grid", gridTemplateColumns: "4fr 5fr" },
-  imgContainer: { width: "560px", height: "325px" },
+  container: { display: "grid", gridTemplateColumns: "4fr 5fr", mb: 4 },
+  imgContainer: { width: "100%" },
   img: { width: "100%", height: "100%", objectFit: "cover" },
   projectName: { lineHeight: "normal", mb: 1 },
   projectDescrip: { maxWidth: "525px", mb: 1.5, fontSize: "1rem" },
@@ -66,4 +78,9 @@ const styles = {
   },
   languageSpan: { mx: 1.75, width: "100px" },
   icon: { mx: 2, mt: 2 },
+  icon: (mui) => ({
+    mx: 2,
+    mt: 2,
+    "&:hover": { "*": { color: mui.palette.primary.main } },
+  }),
 };
