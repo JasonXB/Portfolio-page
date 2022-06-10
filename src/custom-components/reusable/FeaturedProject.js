@@ -5,8 +5,8 @@ import FeaturedProject_mobile from "../../sub-blocks/FeaturedProject_mobile";
 export default function FeaturedProject({ dataObj, mb }) {
   return (
     <>
-      {/* <FeaturedProject_mobile dataObj={dataObj} mb={mb}/> */}
-      <FeaturedProject_desktop dataObj={dataObj} />
+      <FeaturedProject_mobile dataObj={dataObj} mb={mb}/>
+      {/* <FeaturedProject_desktop dataObj={dataObj} /> */}
     </>
   );
 }

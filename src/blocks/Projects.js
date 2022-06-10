@@ -4,6 +4,7 @@ import NumberedHeader from "../custom-components/reusable/NumberedHeader";
 import { Stack, Box, Typography } from "@mui/material";
 import FeaturedProject from "../custom-components/reusable/FeaturedProject";
 import { projectsBP } from "../../styles/breakpoints";
+import FeaturedProject_mobile from "../sub-blocks/FeaturedProject_mobile";
 //=
 export default function Projects() {
   const localEats = {
@@ -43,21 +44,23 @@ export default function Projects() {
   return (
     <SectionBlock>
       <NumberedHeader num="03." txt="Projects" />
-      <Stack>
+      {/* For Mobile screens */}
+      <Stack sx={{ [projectsBP.layoutChange2]: { display: "none" } }}>
+        <Typography variant="h3" color="secondary" sx={styles.subheader}>
+          Full-stack Sites
+        </Typography>
         <Box sx={{ [projectsBP.layoutChange1]: { mb: "4rem" } }}>
-          <Typography variant="h3" color="secondary" sx={styles.subheader}>
-            Full-stack Web Apps
-          </Typography>
-          <FeaturedProject dataObj={localEats} mb="4rem" />
+          <FeaturedProject_mobile dataObj={localEats} mb="4rem" />
         </Box>
         <Typography variant="h3" color="secondary" sx={styles.subheader}>
           Landing Pages
         </Typography>
-        <Box sx={styles.projectColumn}>
-          <FeaturedProject dataObj={smashBros} mb="2rem" />
-          <FeaturedProject dataObj={monstercat} mb="4rem" />
+        <Box sx={styles.landingPages}>
+          <FeaturedProject_mobile dataObj={smashBros} mb="2rem" />
+          <FeaturedProject_mobile dataObj={monstercat} mb="4rem" />
         </Box>
       </Stack>
+      {/* For Desktop screens */}
     </SectionBlock>
   );
 }
@@ -75,4 +78,12 @@ const styles = {
     },
   },
   subheader: { mb: "2rem", textAlign: "center" },
+  landingPages: {
+    [projectsBP.layoutChange1]: {
+      mb: "4rem",
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 2,
+    },
+  },
 };
