@@ -4,7 +4,7 @@ import NumberedHeader from "../custom-components/reusable/NumberedHeader";
 import { Typography, Box, Stack, IconButton } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import SubHeader from "../custom-components/reusable/SubHeader";
 import Snackbar from "@mui/material/Snackbar";
 import CloseIcon from "@mui/icons-material/Close";
@@ -65,10 +65,7 @@ export default function Contact() {
               aria-label="Redirect to my LinkedIn"
               sx={(mui) => styles.iconButton(mui)}
             >
-              <ChatBubbleOutlineOutlinedIcon
-                fontSize="large"
-                sx={styles.icon}
-              />
+              <PersonAddIcon fontSize="large" sx={styles.icon} />
               <Typography variant="span" sx={(mui) => styles.span(mui)}>
                 Connect with me on LinkedIn
               </Typography>
@@ -95,6 +92,10 @@ const styles = {
     width: "100%",
     maxWidth: "800px",
     mt: "1.5rem",
+    ["@media (min-width: 1200px)"]: {
+      gridTemplateColumns: "1fr 1fr",
+      maxWidth: "1400px",
+    },
   },
   iconButton: (mui) => ({
     p: 2.5,
