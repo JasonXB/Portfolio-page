@@ -9,6 +9,7 @@ import SubHeader from "../custom-components/reusable/SubHeader";
 import Snackbar from "@mui/material/Snackbar";
 import CloseIcon from "@mui/icons-material/Close";
 import useRedirect from "../../src/utility-functions/useRedirect";
+import Link from "@mui/material/Link";
 //=
 export default function Contact() {
   const [open, setOpen] = React.useState(false);
@@ -56,16 +57,23 @@ export default function Contact() {
               Copy contact email to clipboard
             </Typography>
           </IconButton>
-          <IconButton
-            aria-label="Redirect to my LinkedIn"
-            sx={(mui) => styles.iconButton(mui)}
-            onClick={() => redirectToLinkedIn()}
+          <Link
+            href="https://www.linkedin.com/in/jason-bustamante/"
+            sx={{ textDecoration: "none" }}
           >
-            <ChatBubbleOutlineOutlinedIcon fontSize="large" sx={styles.icon} />
-            <Typography variant="span" sx={(mui) => styles.span(mui)}>
-              Connect with me on LinkedIn
-            </Typography>
-          </IconButton>
+            <IconButton
+              aria-label="Redirect to my LinkedIn"
+              sx={(mui) => styles.iconButton(mui)}
+            >
+              <ChatBubbleOutlineOutlinedIcon
+                fontSize="large"
+                sx={styles.icon}
+              />
+              <Typography variant="span" sx={(mui) => styles.span(mui)}>
+                Connect with me on LinkedIn
+              </Typography>
+            </IconButton>
+          </Link>
         </Box>
       </Stack>
       <Snackbar
@@ -94,6 +102,7 @@ const styles = {
     borderRadius: 5,
     color: mui.palette.secondary.main,
     border: `2px solid ${mui.palette.secondary.main}`,
+    width: "100%",
     // On hover...
     "&:hover": {
       // Color the border a diff theme color
