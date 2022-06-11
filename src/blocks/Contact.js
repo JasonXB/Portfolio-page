@@ -1,7 +1,7 @@
 import React from "react";
 import SectionBlock from "../custom-components/reusable/SectionBlock";
 import NumberedHeader from "../custom-components/reusable/NumberedHeader";
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, IconButton } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
@@ -11,26 +11,28 @@ export default function Contact() {
   return (
     <SectionBlock>
       <NumberedHeader num="04." txt="Contact" />
-      <Stack sx={styles.container}>
+      <Stack sx={{ ...mxn.flexColumn }}>
         <SubHeader txt="Let's get in touch" />
 
         <Box sx={styles.optionsBox}>
-          <Stack sx={styles.contactOption}>
-            <EmailOutlinedIcon
-              sx={styles.icon}
-            />
-            <Typography variant="p" color="secondary" sx={{ mt: "1rem" }}>
-              jasonxb96@hotmail.com
+          <IconButton
+            aria-label="copy my email"
+            sx={(mui) => styles.iconButton(mui)}
+          >
+            <EmailOutlinedIcon fontSize="large" sx={styles.icon} />
+            <Typography variant="span" sx={(mui) => styles.span(mui)}>
+              Copy contact email to clipboard
             </Typography>
-          </Stack>
-          <Stack sx={styles.contactOption}>
-            <ChatBubbleOutlineOutlinedIcon
-              sx={styles.icon}
-            />
-            <Typography variant="p" color="secondary" sx={{ mt: "1rem" }}>
-              Click to find me on LinkedIn
+          </IconButton>
+          <IconButton
+            aria-label="redirect to my LinkedIn"
+            sx={(mui) => styles.iconButton(mui)}
+          >
+            <ChatBubbleOutlineOutlinedIcon fontSize="large" sx={styles.icon} />
+            <Typography variant="span" sx={(mui) => styles.span(mui)}>
+              Send a message on LinkedIn
             </Typography>
-          </Stack>
+          </IconButton>
         </Box>
       </Stack>
     </SectionBlock>
@@ -38,26 +40,35 @@ export default function Contact() {
 }
 
 const styles = {
-  container: {
-    borderRadius: 5,
-    // background: "#8892b0", //! change
-    // p: 5,
-  },
   optionsBox: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
+    justifyContent: "center",
+    gap: 4,
     width: "100%",
+    maxWidth: "800px",
     mt: "1.5rem",
   },
-  contactOption: {
-    ...mxn.flexColumn,
-    // boxShadow: "rgba(134, 151, 168, 1)",
-  },
-  icon: {
+  iconButton: (mui) => ({
     p: 2.5,
-    fontSize: "5rem",
+    fontSize: "1.5rem",
     borderRadius: 5,
-    color: "#64ffda",
-    border: "2px solid #64ffda",
+    color: mui.palette.secondary.main,
+    border: `2px solid ${mui.palette.secondary.main}`,
+    // On hover...
+    "&:hover": {
+      // Color the border a diff theme color
+      border: `2px solid ${mui.palette.primary.main}`,
+      // Color the text a diff theme color
+      "*": { color: mui.palette.primary.main },
+    },
+  }),
+  icon: {
+    display: "none",
+    ["@media (min-width: 600px)"]: { display: "inline-block", mr: 2 },
   },
+  span: (mui) => ({
+    color: mui.palette.secondary.main,
+    "&:hover": { "*": { border: `2px solid ${mui.palette.primary.main}` } },
+    ["@media (max-width: 600px)"]: { fontSize: "1.25rem" },
+  }),
 };

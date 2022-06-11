@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <PaddedBlock>
       <Navbar />
-      {/* <Intro /> */}
+      <Intro />
       {/* <About /> */}
-      {/* <Projects /> */}
-      <Contact/>
       <Skills/>
+      <Projects />
+      <Contact/>
       <Box sx={{ height: "500vh" }}></Box>
     </PaddedBlock>
   );
