@@ -9,7 +9,6 @@ export default function SkillGroup({ genre, data }) {
     container: { mb: "2rem" },
     genre: {
       mb: "1rem",
-      [skillsBP.twoColumns]: { height: "3.75rem" },
     },
     languageRow: {
       display: "grid",

@@ -16,7 +16,8 @@ export const containerDims = {
   [introBP.minWidth]: { mt: "10rem", mb: "10rem" },
 };
 
-export const skillsBP = { twoColumns: "@media (min-width: 650px)" };
+// Determine when we switch layouts in the skills section
+export const skillsBP = { twoColumns: "@media (min-width: 700px)" };
 
 export const projectsBP = {
   layoutChange: "@media (min-width: 950px)",

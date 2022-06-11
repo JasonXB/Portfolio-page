@@ -55,13 +55,13 @@ export default function Skills() {
         <SkillGroup genre="Core Languages" data={core} />
 
         <SkillGroup
-          genre="Package Managers + Bundlers"
+          genre="Package Management"
           data={pkgManagersBundlers}
         />
         <SkillGroup genre="Version Control" data={versionControl} />
         <SkillGroup genre="Databases" data={databases} />
         <SkillGroup genre="Hosting Services" data={hosting} />
-        <SkillGroup genre={`Authentication + Emailing`} data={authentication} />
+        <SkillGroup genre={`Authentication`} data={authentication} />
 
         {/* <SkillGroup genre="Currently Learning" data={future} /> */}
       </Stack>
