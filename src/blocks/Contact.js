@@ -6,8 +6,36 @@ import { mxn } from "../../styles/mixins";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import SubHeader from "../custom-components/reusable/SubHeader";
+import Snackbar from "@mui/material/Snackbar";
+import CloseIcon from "@mui/icons-material/Close";
+import useRedirect from "../../src/utility-functions/useRedirect";
 //=
 export default function Contact() {
+  const [open, setOpen] = React.useState(false);
+  const redirectToLinkedIn = useRedirect(
+    "https://www.linkedin.com/in/jason-bustamante"
+  );
+  const handleClick = () => {
+    navigator.clipboard.writeText("jasonxb96@gmail.com"); // Copy contact email to keyboard
+    setOpen(true); // Tell users it worked with an MUI snackbar
+  };
+  const handleClose = () => setOpen(false);
+
+  // The snack bar that comes up
+  // Can disable it by waiting for 3s, clicking on viewport, or hitting the x icon
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
   return (
     <SectionBlock>
       <NumberedHeader num="04." txt="Contact" />
@@ -20,21 +48,33 @@ export default function Contact() {
             sx={(mui) => styles.iconButton(mui)}
           >
             <EmailOutlinedIcon fontSize="large" sx={styles.icon} />
-            <Typography variant="span" sx={(mui) => styles.span(mui)}>
+            <Typography
+              variant="span"
+              sx={(mui) => styles.span(mui)}
+              onClick={() => handleClick()}
+            >
               Copy contact email to clipboard
             </Typography>
           </IconButton>
           <IconButton
-            aria-label="redirect to my LinkedIn"
+            aria-label="Redirect to my LinkedIn"
             sx={(mui) => styles.iconButton(mui)}
+            onClick={() => redirectToLinkedIn()}
           >
             <ChatBubbleOutlineOutlinedIcon fontSize="large" sx={styles.icon} />
             <Typography variant="span" sx={(mui) => styles.span(mui)}>
-              Send a message on LinkedIn
+              Connect with me on LinkedIn
             </Typography>
           </IconButton>
         </Box>
       </Stack>
+      <Snackbar
+        open={open}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        message="Copied contact email"
+        action={action}
+      />
     </SectionBlock>
   );
 }
