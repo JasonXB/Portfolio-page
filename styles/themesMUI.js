@@ -48,11 +48,12 @@ const typography = {
     fontWeight: 600,
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
-    
+
     // use this trick to add ------dividers------ to headers
+    // placed the required code in our global css file
     // https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle#:~:text=Here%20is%20Flex%20based%20solution.
   },
- // Sub headers for skills section (like Full-stack web apps)
+  // Sub headers for skills section (like Full-stack web apps)
   h4: {
     fontFamily: `'Orbitron', sans-serif;`,
     fontSize: "1.5rem", // 24px
@@ -67,7 +68,7 @@ const typography = {
     fontWeight: 600,
     lineHeight: 1.235,
     letterSpacing: "0.00735em",
-    color:"#ccd6f6"
+    color: "#ccd6f6",
   },
   h6: {
     fontFamily: `'Fira Code', monospace`,

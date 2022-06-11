@@ -6,7 +6,7 @@ export default function SubHeader({ txt }) {
     genre: { mb: "1rem", textAlign: "center" },
   };
   return (
-    <Typography variant="h3" color="secondary" sx={styles.genre}>
+    <Typography variant="h4" color="secondary" sx={styles.genre}>
       {txt}
     </Typography>
   );
