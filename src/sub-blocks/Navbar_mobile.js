@@ -52,16 +52,20 @@ export default function ButtonAppBar() {
               <IconButton
                 aria-label="escape"
                 onClick={() => toggleDrawer()}
-                sx={(mui) => ({ color: "white" })}
+                sx={{ color: "white" }}
               >
                 <CloseIcon fontSize="large" />
               </IconButton>
             </Box>
             <Divider sx={{ ...styles.divider }} />
-            <SliderAnchor num="01" href="#about_me" txt="About me" />
-            <SliderAnchor num="02" href="#skills" txt="Skills" />
-            <SliderAnchor num="03" href="#projects" txt="Projects" />
-            <SliderAnchor num="04" href="#projects" txt="Contact" />
+            {/*  prettier-ignore */}
+            <SliderAnchor num="01" href="#about_me" txt="About me" toggleDrawer={toggleDrawer}/>
+            {/*  prettier-ignore */}
+            <SliderAnchor num="02" href="#skills" txt="Skills" toggleDrawer={toggleDrawer} />
+            {/*  prettier-ignore */}
+            <SliderAnchor num="03" href="#projects" txt="Projects" toggleDrawer={toggleDrawer} />
+            {/*  prettier-ignore */}
+            <SliderAnchor num="04" href="#contact" txt="Contact" toggleDrawer={toggleDrawer} />
             <ResumeButton customVariant="mobile" />
           </Stack>
         </Drawer>
