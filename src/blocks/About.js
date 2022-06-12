@@ -14,6 +14,7 @@ export default function About() {
     miniHeader2: "University",
     answer2: "UOIT",
     img: "/images/rogue.png",
+    // img: "/images/pokeball.png",
   };
   const card2 = {
     header: "Personal Details",
@@ -21,7 +22,7 @@ export default function About() {
     answer1: "Jason Bustamante",
     miniHeader2: "Age",
     answer2: "25 (and a half!)",
-    img: "/images/rogue.png",
+    img: "/images/pokeball.png",
   };
   const card3 = {
     header: "Other Interests",
@@ -30,6 +31,7 @@ export default function About() {
     miniHeader2: "Casual",
     answer2: "Playing obscure indie games",
     img: "/images/rogue.png",
+    // img: "/images/pokeball.png",
   };
   return (
     <SectionBlock>

@@ -9,7 +9,7 @@ export default function AboutMeCard({ cardData }) {
       borderRadius: "50%",
       height: "100px",
       width: "100px",
-      border: "6px solid black",
+      // border: "3px solid black",
       mt: "32px",
       background: `url(${cardData.img})`,
       backgroundSize: 'contain' 
