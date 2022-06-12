@@ -30,7 +30,7 @@ export default function Projects() {
       {/* For Desktop screens */}
       <Stack sx={desktopStyles.containers}>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>
-        &nbsp;&nbsp;Full Stack Web Apps&nbsp;&nbsp;
+          &nbsp;&nbsp;Full Stack Web Apps&nbsp;&nbsp;
         </Typography>
         <FeaturedProject_desktop dataObj={localEats} mb="4rem" />
         <Typography

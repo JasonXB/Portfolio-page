@@ -1,8 +1,6 @@
 import React from "react";
 import SkillIcon from "./SkillIcon";
 import { Box, Typography } from "@mui/material";
-import { mxn } from "../../../styles/mixins";
-import { skillsBP } from "../../../styles/breakpoints";
 
 export default function SkillGroup({ genre, data }) {
   const styles = {
@@ -21,7 +19,7 @@ export default function SkillGroup({ genre, data }) {
 
   return (
     <Box sx={styles.container}>
-      <Typography variant="h4" color="secondary" sx={styles.genre}>
+      <Typography variant="h5" color="secondary" sx={styles.genre}>
         {genre}
       </Typography>
       <Box sx={styles.languageRow}>

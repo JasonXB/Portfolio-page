@@ -10,7 +10,7 @@ export default function SkillIcon({ skill, imgLink, alt, isPNG = false }) {
         alt={alt}
         style={{ height: '45px', marginBottom: "0.75rem" }}
       />
-      <Typography variant="p" sx={{ color: "#8892b0" }}>
+      <Typography variant="p" sx={{ color: "#8892b0", fontSize: "1rem" }}>
         {skill}
       </Typography>
     </Stack>

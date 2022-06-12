@@ -41,8 +41,7 @@ export default function Contact() {
     <SectionBlock>
       <NumberedHeader num="04." txt="Contact" />
       <Stack sx={{ ...mxn.flexColumn }}>
-        <SubHeader txt="Let's get in touch" />
-
+        <SubHeader txt="Let's get in touch!" />
         <Box sx={styles.optionsBox}>
           <IconButton
             aria-label="copy my email"
@@ -50,11 +49,7 @@ export default function Contact() {
             onClick={() => handleClick()}
           >
             <EmailOutlinedIcon fontSize="large" sx={styles.icon} />
-            <Typography
-              variant="span"
-              sx={(mui) => styles.span(mui)}
-              
-            >
+            <Typography variant="span" sx={(mui) => styles.span(mui)}>
               Copy contact email to clipboard
             </Typography>
           </IconButton>

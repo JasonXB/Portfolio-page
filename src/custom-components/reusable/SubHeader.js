@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function SubHeader({ txt }) {
   const styles = {
