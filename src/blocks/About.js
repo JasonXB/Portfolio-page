@@ -12,19 +12,28 @@ export default function About() {
     <SectionBlock>
       <NumberedHeader num="01." txt="About Me" />
       <Stack>
-        <Box
-          sx={{
-            background: "linear-gradient(180deg, #64ffda 20%, black 20%)",
-            height: "25rem",
-            width: "15.625rem",
-            ...mxn.flexColumn,
-            borderRadius: 5,
-          }}
-        >
-          <Box sx={styles.circle}>
-            <SchoolIcon fontSize="large" sx={{ mt: "32px" }} />
+        <Box sx={styles.multicolor}>
+          <Box sx={styles.circle}></Box>
+          <Typography variant="h5" color="primary" sx={{ mt: 1 }}>
+            Education
+          </Typography>
+
+          <Box sx={styles.typographyBox}>
+            <Typography variant="p" color="secondary" sx={styles.typ}>
+              Degree
+            </Typography>
+            <Typography variant="p" color="secondary" sx={styles.typ}>
+              Mechanical Engineering
+            </Typography>
           </Box>
-          <Typography variant="p">Education</Typography>
+          <Box sx={{ ...styles.typographyBox, pt: 0 }}>
+            <Typography variant="p" color="secondary" sx={styles.typ}>
+              University
+            </Typography>
+            <Typography variant="p" color="secondary" sx={styles.typ}>
+              UOIT
+            </Typography>
+          </Box>
         </Box>
       </Stack>
     </SectionBlock>
@@ -32,14 +41,29 @@ export default function About() {
 }
 const styles = {
   circle: {
+    ...mxn.flexColumn,
     borderRadius: "50%",
     height: "100px",
     width: "100px",
-    border: "2px solid white",
-    background: "white",
+    border: "6px solid black",
     mt: "32px",
-    ...mxn.flexColumn,
+    background: 'url("/images/uoit.jpg")',
   },
+  multicolor: {
+    background: "linear-gradient(180deg, #64ffda 20%, black 20%)",
+    // height: "20rem",
+    width: "17.625rem",
+    ...mxn.flexColumn,
+    borderRadius: 5,
+  },
+  typographyBox: {
+    display: "grid",
+    width: "100%",
+    gridTemplateColumns: "1fr",
+    justifyContent: "center",
+    p: 2,
+  },
+  typ: { fontSize: "1rem", textAlign: "center" },
 };
 /*
 <Typography variant="p" color="secondary">
