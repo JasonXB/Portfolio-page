@@ -13,7 +13,7 @@ export default function Home() {
     <PaddedBlock>
       <Navbar />
       <Intro />
-      {/* <About /> */}
+      <About />
       <Skills/>
       <Projects />
       <Contact/>
