@@ -8,14 +8,11 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import SubHeader from "../custom-components/reusable/SubHeader";
 import Snackbar from "@mui/material/Snackbar";
 import CloseIcon from "@mui/icons-material/Close";
-import useRedirect from "../../src/utility-functions/useRedirect";
 import Link from "@mui/material/Link";
 //=
 export default function Contact() {
   const [open, setOpen] = React.useState(false);
-  const redirectToLinkedIn = useRedirect(
-    "https://www.linkedin.com/in/jason-bustamante"
-  );
+  
   const handleClick = () => {
     navigator.clipboard.writeText("jasonxb96@gmail.com"); // Copy contact email to keyboard
     setOpen(true); // Tell users it worked with an MUI snackbar

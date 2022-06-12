@@ -48,24 +48,3 @@ export default function About() {
     </SectionBlock>
   );
 }
-
-/*
-<Typography variant="p" color="secondary">
-              NAME: Jason Bustamante
-            </Typography>
-            <Typography variant="p" color="secondary">
-              AGE: 25
-            </Typography>
-            <Typography variant="p" color="secondary">
-              DEGREE: Mechanical Engineering
-            </Typography>
-            <Typography variant="p" color="secondary">
-              GRADUATED FROM: University of Ontario Institute of Technology
-            </Typography>
-            <Typography variant="p" color="secondary">
-              LOCATION: Ontario, Canada (willing to relocate)
-            </Typography>
-            <Typography variant="p" color="secondary">
-              EMAIL: jasonxb96@gmail.com
-            </Typography>
-*/
