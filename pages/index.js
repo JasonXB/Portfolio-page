@@ -6,11 +6,13 @@ import About from "../src/blocks/About";
 import Skills from "../src/blocks/Skills";
 import Projects from "../src/blocks/Projects";
 import Contact from "../src/blocks/Contact";
+import TabTitle from "../src/custom-components/reusable/TabTitle";
 // import { Box } from "@mui/material";
 
 export default function Home() {
   return (
     <PaddedBlock>
+      <TabTitle title="Jason B" />
       <Navbar />
       <Intro />
       <About />
