@@ -34,13 +34,7 @@ export default function About() {
   return (
     <SectionBlock>
       <NumberedHeader num="01." txt="About Me" />
-      <Stack
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          justifyItems: "center",
-        }}
-      >
+      <Stack sx={styles.grid}>
         <AboutMeCard cardData={card1} />
         <AboutMeCard cardData={card2} />
         <AboutMeCard cardData={card3} />
@@ -48,3 +42,13 @@ export default function About() {
     </SectionBlock>
   );
 }
+
+const styles = {
+  grid: {
+    display: "grid",
+    gap: 4,
+    gridTemplateColumns: "1fr",
+    justifyItems: "center",
+    ["@media (min-width: 850px)"]: { gridTemplateColumns: "1fr 1fr 1fr" },
+  },
+};
