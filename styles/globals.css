@@ -20,6 +20,9 @@ body {
   overflow-x: hidden;
   background: #0a192f;
 }
+/* Offsets the scroll distnce for all h2's (looks better for anchor-indiced scrolling)*/
+
+/* Puts divider lines to the left and right of all h3's*/
 h3 {
   display: flex;
   flex-direction: row;

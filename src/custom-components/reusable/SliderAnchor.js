@@ -22,5 +22,8 @@ export default function SliderAnchor(props) {
   );
 }
 const styles = {
-  anchor: { p: 2, pl: 0 },
+  anchor: {
+    p: 2,
+    pl: 0,
+  },
 };
