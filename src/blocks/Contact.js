@@ -47,12 +47,13 @@ export default function Contact() {
           <IconButton
             aria-label="copy my email"
             sx={(mui) => styles.iconButton(mui)}
+            onClick={() => handleClick()}
           >
             <EmailOutlinedIcon fontSize="large" sx={styles.icon} />
             <Typography
               variant="span"
               sx={(mui) => styles.span(mui)}
-              onClick={() => handleClick()}
+              
             >
               Copy contact email to clipboard
             </Typography>
