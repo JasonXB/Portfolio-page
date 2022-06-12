@@ -45,15 +45,13 @@ export default function Skills() {
     { lang: "Typescript", url: "/skills/typescript.svg", alt: "TS logo" },
     { lang: "Node.js", url: "/skills/nodejs.svg", alt: "Node logo" },
   ];
-
-  const allSkills = [core, frameworks, databases, authentication,hosting, pkgManagersBundlers, versionControl, future]; // prettier-ignore
-  //! Refactor all 02. skills sets of elements
+  
   return (
     <SectionBlock>
       <NumberedHeader num="02." txt="Skills" />
       <Stack sx={styles.skillgroups}>
         <SkillGroup genre="Core Languages" data={core} />
-
+        <SkillGroup genre="Frameworks" data={frameworks} />
         <SkillGroup
           genre="Package Management"
           data={pkgManagersBundlers}
@@ -63,7 +61,7 @@ export default function Skills() {
         <SkillGroup genre="Hosting Services" data={hosting} />
         <SkillGroup genre={`Authentication`} data={authentication} />
 
-        {/* <SkillGroup genre="Currently Learning" data={future} /> */}
+        <SkillGroup genre="Currently Learning" data={future} />
       </Stack>
     </SectionBlock>
   );
