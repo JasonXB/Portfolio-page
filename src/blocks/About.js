@@ -1,70 +1,54 @@
 import React from "react";
-import { Typography, Box, Stack, Container } from "@mui/material";
+import { Stack } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import SectionBlock from "../custom-components/reusable/SectionBlock";
 import NumberedHeader from "../custom-components/reusable/NumberedHeader";
-import SchoolIcon from "@mui/icons-material/School";
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
+import AboutMeCard from "../sub-blocks/AboutMeCard";
 
 //=
 export default function About() {
+  const card1 = {
+    header: "Education",
+    miniHeader1: "Degree",
+    answer1: "Mechanical Engineering",
+    miniHeader2: "University",
+    answer2: "UOIT",
+    img: "/images/rogue.png",
+  };
+  const card2 = {
+    header: "Personal Details",
+    miniHeader1: "Name",
+    answer1: "Jason Bustamante",
+    miniHeader2: "Age",
+    answer2: "25 (and a half!)",
+    img: "/images/rogue.png",
+  };
+  const card3 = {
+    header: "Other Interests",
+    miniHeader1: "Professional",
+    answer1: "3D modelling & drafting",
+    miniHeader2: "Casual",
+    answer2: "Playing obscure indie games",
+    img: "/images/rogue.png",
+  };
   return (
     <SectionBlock>
       <NumberedHeader num="01." txt="About Me" />
-      <Stack>
-        <Box sx={styles.multicolor}>
-          <Box sx={styles.circle}></Box>
-          <Typography variant="h5" color="primary" sx={{ mt: 1 }}>
-            Education
-          </Typography>
-
-          <Box sx={styles.typographyBox}>
-            <Typography variant="p" color="secondary" sx={styles.typ}>
-              Degree
-            </Typography>
-            <Typography variant="p" color="secondary" sx={styles.typ}>
-              Mechanical Engineering
-            </Typography>
-          </Box>
-          <Box sx={{ ...styles.typographyBox, pt: 0 }}>
-            <Typography variant="p" color="secondary" sx={styles.typ}>
-              University
-            </Typography>
-            <Typography variant="p" color="secondary" sx={styles.typ}>
-              UOIT
-            </Typography>
-          </Box>
-        </Box>
+      <Stack
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          justifyItems: "center",
+        }}
+      >
+        <AboutMeCard cardData={card1} />
+        <AboutMeCard cardData={card2} />
+        <AboutMeCard cardData={card3} />
       </Stack>
     </SectionBlock>
   );
 }
-const styles = {
-  circle: {
-    ...mxn.flexColumn,
-    borderRadius: "50%",
-    height: "100px",
-    width: "100px",
-    border: "6px solid black",
-    mt: "32px",
-    background: 'url("/images/uoit.jpg")',
-  },
-  multicolor: {
-    background: "linear-gradient(180deg, #64ffda 20%, black 20%)",
-    // height: "20rem",
-    width: "17.625rem",
-    ...mxn.flexColumn,
-    borderRadius: 5,
-  },
-  typographyBox: {
-    display: "grid",
-    width: "100%",
-    gridTemplateColumns: "1fr",
-    justifyContent: "center",
-    p: 2,
-  },
-  typ: { fontSize: "1rem", textAlign: "center" },
-};
+
 /*
 <Typography variant="p" color="secondary">
               NAME: Jason Bustamante
