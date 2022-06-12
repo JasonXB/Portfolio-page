@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <SectionBlock>
-      <NumberedHeader num="04." txt="Contact" />
+      <NumberedHeader navID={"contact"} num="04." txt="Contact" />
       <Stack sx={{ ...mxn.flexColumn }}>
         <SubHeader txt="Let's get in touch!" />
         <Box sx={styles.optionsBox}>

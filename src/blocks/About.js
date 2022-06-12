@@ -33,7 +33,7 @@ export default function About() {
   };
   return (
     <SectionBlock>
-      <NumberedHeader num="01." txt="About Me" />
+      <NumberedHeader navID={"about_me"} num="01." txt="About Me" />
       <Stack sx={styles.grid}>
         <AboutMeCard cardData={card1} />
         <AboutMeCard cardData={card2} />

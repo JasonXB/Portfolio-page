@@ -33,6 +33,7 @@ const styles = {
   appBar: {
     display: "flex",
     alignItems: "center",
+    
   },
   spaceBetween: {
     display: "grid",

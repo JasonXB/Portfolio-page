@@ -3,9 +3,9 @@ import { Typography, Box } from "@mui/material";
 import { mxn } from "../../../styles/mixins";
 
 export default function NumberedHeader(props) {
-  const { num, txt } = props;
+  const { num, txt, navID } = props;
   return (
-    <Box sx={{ ...mxn.flexRow, alignItems: "end", mb: "2.25rem" }}>
+    <Box id={navID} sx={{ ...mxn.flexRow, alignItems: "end", mb: "2.25rem" }}>
       <Typography variant="span" sx={{ fontSize: "1.25rem", mr: 1 }}>
         {num}
       </Typography>

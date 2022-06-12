@@ -10,7 +10,7 @@ import { monstercat, smashBros, localEats } from "../projectData";
 export default function Projects() {
   return (
     <SectionBlock>
-      <NumberedHeader num="03." txt="Projects" />
+      <NumberedHeader navID={"projects"} num="03." txt="Projects" />
       {/* For Mobile screens */}
       <Stack sx={{ [projectsBP.layoutChange]: { display: "none" } }}>
         <Typography variant="h3" color="secondary" sx={mobileStyles.subheader}>

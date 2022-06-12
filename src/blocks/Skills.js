@@ -45,10 +45,10 @@ export default function Skills() {
     { lang: "Typescript", url: "/skills/typescript.svg", alt: "TS logo" },
     { lang: "Node.js", url: "/skills/nodejs.svg", alt: "Node logo" },
   ];
-  
+  // navID makes it so clicking the nav anchors will scroll you down to this section
   return (
     <SectionBlock>
-      <NumberedHeader num="02." txt="Skills" />
+      <NumberedHeader navID={"skills"} num="02." txt="Skills" />
       <Stack sx={styles.skillgroups}>
         <SkillGroup genre="Core Languages" data={core} />
         <SkillGroup genre="Frameworks" data={frameworks} />
