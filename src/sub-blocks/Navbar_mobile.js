@@ -25,7 +25,7 @@ export default function ButtonAppBar() {
       }}
     >
       {/* color="bg" nav here */}
-      <AppBar position="static" color="bg" sx={{ boxShadow: "none" }}>
+      <AppBar position="fixed" color="bg" sx={{ boxShadow: "none" }}>
         <Toolbar sx={{ ...styles.spaceBetween }}>
           <ThinLogo />
           {/* The burger icon */}

@@ -8,10 +8,20 @@ import { navbarBP } from "../../styles/breakpoints";
 export default function Navbar_desktop() {
   return (
     <AppBar
-      position="static"
+      position="fixed"
       color="bg"
       sx={{
+        // Same dimensions as padded block
+        width: "100%",
+        maxWidth: "1232px", 
+        // Center the fixed div
+        left: 0,
+        right: 0,
+        marginLeft: "auto",
+        marginRight: "auto",
+        // Misc
         boxShadow: "none",
+        // background: "white",
         [navbarBP.desktop.maxWidth]: { display: "none" },
       }}
     >
@@ -33,7 +43,6 @@ const styles = {
   appBar: {
     display: "flex",
     alignItems: "center",
-    
   },
   spaceBetween: {
     display: "grid",
