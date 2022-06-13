@@ -11,6 +11,7 @@ export default function Intro() {
         ["@media (min-width: 800px)"]: {
           display: "grid",
           gridTemplateColumns: "35.5rem auto",
+          mt: 12,
           alignItems: "center",
         },
       }}

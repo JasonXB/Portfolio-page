@@ -11,12 +11,17 @@ import CloseIcon from "@mui/icons-material/Close";
 import SliderAnchor from "../custom-components/reusable/SliderAnchor";
 import { navbarBP } from "../../styles/breakpoints";
 import ResumeButton from "../custom-components/ResumeButton";
+import Slide from "@mui/material/Slide";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 export default function ButtonAppBar() {
+  const trigger = useScrollTrigger(); // T/F depending on scroll direction
   // Control whether sliding menu is open or not using state
   const [drawer, setDrawer] = React.useState(false);
   const toggleDrawer = () => setDrawer(!drawer);
 
+  //@ <Appbar position='fixed' /> required or else <Slide> does nothing
+  // https://mui.com/material-ui/react-app-bar/#hide-app-bar
   return (
     <Box
       sx={{
@@ -24,52 +29,53 @@ export default function ButtonAppBar() {
         [navbarBP.mobile.minWidth]: { display: "none" },
       }}
     >
-      {/* color="bg" nav here */}
-      <AppBar position="fixed" color="bg" sx={{ boxShadow: "none" }}>
-        <Toolbar sx={{ ...styles.spaceBetween }}>
-          <ThinLogo />
-          {/* The burger icon */}
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={(mui) => ({ color: mui.palette.primary.main, p: 0 })}
-            onClick={() => toggleDrawer()}
+      <Slide appear={false} direction="down" in={!trigger}>
+        <AppBar position="fixed" color="bg" sx={{ boxShadow: "none" }}>
+          <Toolbar sx={{ ...styles.spaceBetween }}>
+            <ThinLogo />
+            {/* The burger icon */}
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={(mui) => ({ color: mui.palette.primary.main, p: 0 })}
+              onClick={() => toggleDrawer()}
+            >
+              <MenuIcon sx={{ fontSize: "2.5rem" }} />
+            </IconButton>
+          </Toolbar>
+          <Drawer
+            anchor={"top"}
+            open={drawer}
+            onClose={() => toggleDrawer()}
+            modalprops={{ width: "500px" }}
           >
-            <MenuIcon sx={{ fontSize: "2.5rem" }} />
-          </IconButton>
-        </Toolbar>
-        <Drawer
-          anchor={"top"}
-          open={drawer}
-          onClose={() => toggleDrawer()}
-          modalProps={{ width: "500px" }}
-        >
-          <Stack sx={(mui) => styles.sliderMenu(mui)}>
-            <Box sx={{ ...mxn.flexRow, justifyContent: "space-between" }}>
-              <ThinLogo color="white" />
-              <IconButton
-                aria-label="escape"
-                onClick={() => toggleDrawer()}
-                sx={{ color: "white" }}
-              >
-                <CloseIcon fontSize="large" />
-              </IconButton>
-            </Box>
-            <Divider sx={{ ...styles.divider }} />
-            {/*  prettier-ignore */}
-            <SliderAnchor num="01" href="#about_me" txt="About me" toggleDrawer={toggleDrawer}/>
-            {/*  prettier-ignore */}
-            <SliderAnchor num="02" href="#skills" txt="Skills" toggleDrawer={toggleDrawer} />
-            {/*  prettier-ignore */}
-            <SliderAnchor num="03" href="#projects" txt="Projects" toggleDrawer={toggleDrawer} />
-            {/*  prettier-ignore */}
-            <SliderAnchor num="04" href="#contact" txt="Contact" toggleDrawer={toggleDrawer} />
-            <ResumeButton customVariant="mobile" />
-          </Stack>
-        </Drawer>
-      </AppBar>
+            <Stack sx={(mui) => styles.sliderMenu(mui)}>
+              <Box sx={{ ...mxn.flexRow, justifyContent: "space-between" }}>
+                <ThinLogo color="white" />
+                <IconButton
+                  aria-label="escape"
+                  onClick={() => toggleDrawer()}
+                  sx={{ color: "white" }}
+                >
+                  <CloseIcon fontSize="large" />
+                </IconButton>
+              </Box>
+              <Divider sx={{ ...styles.divider }} />
+              {/*  prettier-ignore */}
+              <SliderAnchor num="01" href="#about_me" txt="About me" toggleDrawer={toggleDrawer}/>
+              {/*  prettier-ignore */}
+              <SliderAnchor num="02" href="#skills" txt="Skills" toggleDrawer={toggleDrawer} />
+              {/*  prettier-ignore */}
+              <SliderAnchor num="03" href="#projects" txt="Projects" toggleDrawer={toggleDrawer} />
+              {/*  prettier-ignore */}
+              <SliderAnchor num="04" href="#contact" txt="Contact" toggleDrawer={toggleDrawer} />
+              <ResumeButton customVariant="mobile" />
+            </Stack>
+          </Drawer>
+        </AppBar>
+      </Slide>
     </Box>
   );
 }
