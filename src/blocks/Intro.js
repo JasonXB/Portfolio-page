@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography, Box, Stack, Button } from "@mui/material";
 import { introBP, containerDims } from "../../styles/breakpoints";
-import { mxn } from "../../styles/mixins";
 import PublicIcon from "@mui/icons-material/Public";
 
 export default function Intro() {
@@ -30,9 +29,9 @@ export default function Intro() {
           I'm an aspiring front end developer who specializes in building
           exceptional digital experiences using the MERN stack.
         </Typography>
-        <Button variant="outlined" color="primary" sx={styles.blogButton}>
+        {/* <Button variant="outlined" color="primary" sx={styles.blogButton}>
           Check out my blog!
-        </Button>
+        </Button> */}
       </Stack>
 
       <PublicIcon

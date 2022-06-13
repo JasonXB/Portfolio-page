@@ -6,7 +6,7 @@ import { projectsBP } from "../../styles/breakpoints";
 import FeaturedProject_mobile from "../sub-blocks/FeaturedProject_mobile";
 import FeaturedProject_desktop from "../sub-blocks/FeaturedProject_desktop";
 import { monstercat, smashBros, localEats } from "../projectData";
-//=
+
 export default function Projects() {
   return (
     <SectionBlock>
