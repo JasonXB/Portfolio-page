@@ -12,12 +12,11 @@ export default function AboutMeCard({ cardData }) {
       // border: "3px solid black",
       mt: "32px",
       background: `url(${cardData.img})`,
-      backgroundSize: 'contain' 
+      backgroundSize: "contain",
     },
     multicolor: {
-      background: "linear-gradient(180deg, #64ffda 20%, black 20%)",
+      background: "linear-gradient(180deg, #64ffda 25.5%, black 25.5%)",
       backgroundRepeat: "no-repeat",
-      // height: "20rem",
       width: "100%",
       maxWidth: "17.625rem",
       ...mxn.flexColumn,
