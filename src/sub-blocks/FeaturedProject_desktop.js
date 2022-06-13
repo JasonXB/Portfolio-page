@@ -4,7 +4,7 @@ import IconButton from "@mui/material/IconButton";
 import { Typography, Box, Stack } from "@mui/material";
 import { mxn } from "../../styles/mixins";
 import MoveUpIcon from '@mui/icons-material/MoveUp';
-//=
+
 export default function FeaturedProject_desktop({ dataObj, mb }) {
   const { projectName, description, githubLink, hostedLink, img, tools } = dataObj; // prettier-ignore
   return (

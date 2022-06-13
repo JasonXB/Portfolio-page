@@ -7,7 +7,6 @@ import Skills from "../src/blocks/Skills";
 import Projects from "../src/blocks/Projects";
 import Contact from "../src/blocks/Contact";
 import TabTitle from "../src/custom-components/reusable/TabTitle";
-// import { Box } from "@mui/material";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
-      {/* <Box sx={{ height: "500vh" }}></Box> */}
     </PaddedBlock>
   );
 }

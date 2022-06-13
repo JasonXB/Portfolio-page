@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { mxn } from "../../styles/mixins";
-//=
+
 export default function AboutMeCard({ cardData }) {
   const styles = {
     circle: {

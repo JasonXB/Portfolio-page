@@ -1,6 +1,5 @@
 import React from "react";
 import { Stack } from "@mui/material";
-import { mxn } from "../../styles/mixins";
 import SectionBlock from "../custom-components/reusable/SectionBlock";
 import NumberedHeader from "../custom-components/reusable/NumberedHeader";
 import AboutMeCard from "../sub-blocks/AboutMeCard";

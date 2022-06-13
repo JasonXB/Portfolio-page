@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import { projectsBP } from "../../styles/breakpoints";
-// import useRedirect from "../utility-functions/useRedirect";
 
 export default function FeaturedProject_mobile({ dataObj, mb }) {
   const { projectName, description, githubLink, hostedLink, img, toolsString } = dataObj; // prettier-ignore
