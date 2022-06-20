@@ -27,7 +27,6 @@ export default function Navbar_desktop() {
           marginRight: "auto",
           // Misc
           boxShadow: "none",
-          // background: "white",
           [navbarBP.desktop.maxWidth]: { display: "none" },
         }}
       >

@@ -14,6 +14,7 @@ function PaddedBlock(props) {
           width: "100%",
           maxWidth: "1232px", // 1200 after padding
           margin: "auto",
+          background: "#0a192f !important",
           px: px || 0,
           py: py || 0,
           mt: mt || 0,
