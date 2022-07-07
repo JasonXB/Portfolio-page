@@ -21,7 +21,7 @@ export default function About() {
     answer1: "Jason Bustamante",
     miniHeader2: "Age",
     answer2: "25 (and a half!)",
-    img: "/images/pokeball.png",
+    img: "/images/rogue.png",
   };
   const card3 = {
     header: "Other Interests",
