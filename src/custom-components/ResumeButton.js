@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 export default function ResumeButton({ customVariant }) {
   if (!customVariant)
     return (
-      <a href="https://drive.google.com/file/d/1ogbfaF6RY__suRVBi_6oFM8g3mSmFAPV/view">
+      <a href="https://drive.google.com/file/d/1rBFwrgGUGdEdTkoNjVxDasH1-uMLn0GL/view?usp=sharing">
         <Button variant="outlined" color="primary">
           Resume
         </Button>
