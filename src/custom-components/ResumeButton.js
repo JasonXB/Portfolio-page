@@ -2,9 +2,11 @@ import React from "react";
 import Button from "@mui/material/Button";
 
 export default function ResumeButton({ customVariant }) {
+  let resumeLink =
+    "https://drive.google.com/file/d/1hhPNZU92opLDshf7BD6PhVbVkp8PV_BO/view?usp=sharing";
   if (!customVariant)
     return (
-      <a href="https://drive.google.com/file/d/1rBFwrgGUGdEdTkoNjVxDasH1-uMLn0GL/view?usp=sharing">
+      <a href={resumeLink}>
         <Button variant="outlined" color="primary">
           Resume
         </Button>
@@ -12,7 +14,7 @@ export default function ResumeButton({ customVariant }) {
     );
   else
     return (
-      <a style={{margin: "auto"}} href="https://drive.google.com/file/d/1ogbfaF6RY__suRVBi_6oFM8g3mSmFAPV/view">
+      <a style={{ margin: "auto" }} href={resumeLink}>
         <Button
           variant="outlined"
           color="info"
