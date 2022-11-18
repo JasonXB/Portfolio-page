@@ -8,18 +8,19 @@ import NumberedHeader from "../custom-components/reusable/NumberedHeader";
 export default function Skills() {
   const core = [
     { lang: "HTML", url: "/skills/html.svg", alt: "HTML logo" },
-    { lang: "CSS/SCSS", url: "/skills/css.svg", alt: "CSS logo" },
-    // { lang: "SCSS", url: "/skills/scss.png", alt: "SCSS logo" },
+    { lang: "CSS", url: "/skills/css.svg", alt: "CSS logo" },
     { lang: "Javascript", url: "/skills/javascript.svg", alt: "JS logo" },
+    { lang: "Typescript", url: "/skills/typescript.svg", alt: "TS logo" },
   ];
   const frameworks = [
     { lang: "React.js", url: "/skills/react.svg", alt: "React logo" },
     { lang: "Next.js", url: "/skills/nextjs.svg", alt: "Next.js logo" },
-    { lang: "Material UI", url: "/skills/mui.svg", alt: "Material UI logo" },
+    { lang: "Redux", url: "/skills/redux.png", alt: "Redux logo" },
   ];
   const databases = [
-    { lang: "Firebase", url: "/skills/firebase.svg", alt: "Firebase logo" },
     { lang: "MongoDB", url: "/skills/mongodb.png", alt: "Mongo DB logo" },
+    { lang: "MySQL", url: "/skills/mysql.png", alt: "MySQL logo" },
+    { lang: "Firebase", url: "/skills/firebase.svg", alt: "Firebase logo" },
   ];
   const authentication = [
     { lang: "Auth0", url: "/skills/oauth.svg", alt: "OAuth logo" },
@@ -27,13 +28,15 @@ export default function Skills() {
     { lang: "Sendgrid", url: "/skills/sendgrid.png", alt: "Sendgrid logo" },
   ];
   const hosting = [
+    { lang: "Azure", url: "/skills/azure.png", alt: "Azure logo" },
     { lang: "Vercel", url: "/skills/vercel.png", alt: "Vercel logo" },
     { lang: "Netlify", url: "/skills/netlify.svg", alt: "Netlify logo" },
-    { lang: "Hostinger", url: "/skills/hostinger.svg", alt: "Hostinger logo" },
+    { lang: "AWS", url: "/skills/aws.png", alt: "Hostinger logo" },
   ];
   const pkgManagersBundlers = [
     { lang: "NPM", url: "/skills/npm.svg", alt: "NPM logo" },
     { lang: "Yarn", url: "/skills/yarn.svg", alt: "Yarn logo" },
+    { lang: "Webpack", url: "/skills/webpack.png", alt: "Webpack logo" },
     { lang: "Parcel", url: "/skills/parcel.svg", alt: "Parcel logo" },
   ];
   const versionControl = [
@@ -41,9 +44,19 @@ export default function Skills() {
     { lang: "Github", url: "/skills/github.svg", alt: "Github logo" },
     { lang: "Git bash", url: "/skills/gitbash.svg", alt: "Gitbash logo" },
   ];
-  const future = [
-    { lang: "Typescript", url: "/skills/typescript.svg", alt: "TS logo" },
-    { lang: "Node.js", url: "/skills/nodejs.svg", alt: "Node logo" },
+  const cssFrames = [
+    { lang: "SCSS", url: "/skills/scss.png", alt: "SCSS logo" },
+    { lang: "Material UI", url: "/skills/mui.svg", alt: "Material UI logo" },
+    { lang: "Tailwind", url: "/skills/tailwind.png", alt: "Tailwind logo" },
+  ];
+  const backend = [
+    { lang: "Node", url: "/skills/nodejs.svg", alt: "Node logo" },
+    { lang: "Express", url: "/skills/express.png", alt: "Express logo" },
+  ];
+  const testing = [
+    { lang: "Jest", url: "/skills/jest.svg", alt: "Jest logo" },
+    { lang: "Cypress", url: "/skills/cy.png", alt: "Cypress logo" },
+    { lang: "RTL", url: "/skills/rtl.svg", alt: "RTL logo" }, // prettier-ignore
   ];
   // navID makes it so clicking the nav anchors will scroll you down to this section
   return (
@@ -51,17 +64,15 @@ export default function Skills() {
       <NumberedHeader navID={"skills"} num="02." txt="Skills" />
       <Stack sx={styles.skillgroups}>
         <SkillGroup genre="Core Languages" data={core} />
-        <SkillGroup genre="Frameworks" data={frameworks} />
-        <SkillGroup
-          genre="Package Management"
-          data={pkgManagersBundlers}
-        />
+        <SkillGroup genre="Frontend" data={frameworks} />
+        <SkillGroup genre="Backend" data={backend} />
+        <SkillGroup genre="CSS Frameworks" data={cssFrames} />
         <SkillGroup genre="Version Control" data={versionControl} />
-        <SkillGroup genre="Databases" data={databases} />
+        <SkillGroup genre="Testing" data={testing} />
         <SkillGroup genre="Hosting Services" data={hosting} />
+        <SkillGroup genre="Databases" data={databases} />
+        <SkillGroup genre="Package Management" data={pkgManagersBundlers} />
         <SkillGroup genre={`Authentication`} data={authentication} />
-
-        <SkillGroup genre="Currently Learning" data={future} />
       </Stack>
     </SectionBlock>
   );
