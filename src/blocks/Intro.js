@@ -26,8 +26,8 @@ export default function Intro() {
           I build for the web.
         </Typography>
         <Typography variant="p" color="secondary" sx={styles.para}>
-          I'm an aspiring front end developer who specializes in building
-          exceptional digital experiences using the MERN stack.
+          I&apos;m a Fullstack Web Developer who specializes in building
+          exceptional digital experiences using MERN technologies.
         </Typography>
         {/* <Button variant="outlined" color="primary" sx={styles.blogButton}>
           Check out my blog!
