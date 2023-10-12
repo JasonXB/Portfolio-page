@@ -27,7 +27,7 @@ export default function Intro() {
         </Typography>
         <Typography variant="p" color="secondary" sx={styles.para}>
           I&apos;m a Fullstack Web Developer who specializes in building
-          exceptional digital experiences using MERN technologies.
+          exceptional digital experiences using React, Vue, and Node Express.
         </Typography>
         {/* <Button variant="outlined" color="primary" sx={styles.blogButton}>
           Check out my blog!

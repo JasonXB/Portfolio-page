@@ -20,7 +20,7 @@ export default function About() {
     miniHeader1: "Name",
     answer1: "Jason Bustamante",
     miniHeader2: "Age",
-    answer2: "25 (and a half!)",
+    answer2: "27",
     img: "/images/rogue.png",
   };
   const card3 = {
